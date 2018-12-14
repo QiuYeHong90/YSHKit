@@ -9,5 +9,5 @@
 #define YSHKit_h
 
 #import "SHProgressHUD.h"
-
+#import "MBProgressHUD.h"
 #endif /* YSHKit_h */
