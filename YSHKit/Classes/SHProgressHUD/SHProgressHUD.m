@@ -6,11 +6,23 @@
 //  Copyright © 2018年 袁书辉. All rights reserved.
 //
 #define kAppWindow          [UIApplication sharedApplication].delegate.window
-#import "YYKit.h"
 
+#import "YYKit.h"
+#import "MBProgressHUD.h"
 #import "SHProgressHUD.h"
 @interface SHProgressHUD()
 @property (atomic, assign) BOOL canceled;
+
+/**
+ 添加的背景图
+ */
+@property (atomic, strong) UIView * bgView;
+
+/**
+ 进度条
+ */
+@property (atomic, strong) NSProgress *progressObject;
+
 @end
 
 @implementation SHProgressHUD
@@ -28,53 +40,71 @@
 
 #pragma mark - 风火轮/菊花
 +(void)showSingleWheelInView:(UIView *)view{
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3*NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        [hud hideAnimated:YES];
-    });
+    [self showSingeWheelWithMsg:nil view:view];
 }
 #pragma mark - 简单的菊花加上简单的文字
 +(void)showSingeWheelWithMsg:(NSString *)msg view:(UIView *)view{
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.label.text = msg;
-    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3*NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        [hud hideAnimated:YES];
-    });
+    
+    [self showSingleWheelWithSingelMsg:msg detailMsg:nil view:view];
+    
 }
 #pragma mark - 简单的菊花加上简单的文字和复杂的文字
-+(void)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view{
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.label.text = msg;
-    hud.detailsLabel.text = detailMsg;
-    dispatch_time_t time=dispatch_time(DISPATCH_TIME_NOW, 3*NSEC_PER_SEC);
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        [hud hideAnimated:YES];
-    });
++(void)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view
+{
+    
+        //    先隐藏其他hud
+        [self hideHUD];
+        if (view == nil) view = [UIApplication sharedApplication].keyWindow;
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+        hud.detailsLabel.text = detailMsg;
+        hud.label.text = msg;
+        [self commonConfigLoadingHud:hud];
+        [SHProgressHUD shareManager].bgView = view ;
+    
+    
+    
 }
+
 #pragma mark - 蛋糕状读条器
 +(void)showSingleProgressView:(UIView *)view{
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    //    先隐藏其他hud
+    [self hideHUD];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeDeterminate;
-    [SHProgressHUD commonConfigHud:hud];
+    [SHProgressHUD commonConfigLoadingHud:hud];
     NSProgress *progressObject = [NSProgress progressWithTotalUnitCount:100];
     hud.progressObject = progressObject;
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        // Do something useful in the background and update the HUD periodically.
-        [[SHProgressHUD shareManager]doSomeWorkWithProgressObject:progressObject];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [hud hideAnimated:YES];
-        });
-    });
+    [SHProgressHUD shareManager].bgView = view ;
+    [SHProgressHUD shareManager].progressObject = progressObject ;
+
 }
+
+
+/**
+ 更新进度
+ @param count 最大值100 单位1
+ */
++(void)updateSingleProgress:(NSInteger)count
+{
+    NSProgress *progressObject = [SHProgressHUD shareManager].progressObject;
+    if (progressObject.fractionCompleted < 1.0f) {
+        if (progressObject.isCancelled) return;
+
+        progressObject.completedUnitCount = count ;
+
+    }
+    
+}
+
+
+
+
+
 #pragma mark - 蛋糕状读条器带着取消按钮
 -(void)showSingleProgressViewWithCancle:(UIView *)view singleMsg:(NSString *)msg buttonTitle:(NSString *)btnMsg{
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     // Set the determinate mode to show task progress.
     hud.mode = MBProgressHUDModeDeterminate;
@@ -261,7 +291,8 @@
  */
 + (void)hideHUD
 {
-    [self hideHUDForView:nil];
+    
+    [self hideHUDForView:[SHProgressHUD shareManager].bgView];
 }
 
 /**
@@ -302,11 +333,13 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             // Instead we could have also passed a reference to the HUD
             // to the HUD to myProgressTask as a method parameter.
-            [MBProgressHUD HUDForView:[UIApplication sharedApplication].keyWindow].progress = progress;
+            [[self class] updateSingleProgress:progress];
         });
         usleep(50000);
     }
 }
+
+
 - (void)cancelWork:(id)sender {
     self.canceled = YES;
 }
@@ -323,8 +356,13 @@
 }
 
 
+
+
+
 +(void)commonConfigHud:(MBProgressHUD *)hud
 {
+    hud.contentColor = [UIColor whiteColor];
+    
     hud.margin = 15 ;
     hud.marginV = 10 ;
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
@@ -332,17 +370,37 @@
     hud.label.textColor = [UIColor colorWithHexString:@"ffffff"];
     hud.label.font = [UIFont systemFontOfSize:15];
     hud.label.numberOfLines = 0 ;
+    
+    hud.detailsLabel.textColor = [UIColor colorWithHexString:@"ffffff"];
+    hud.detailsLabel.font = [UIFont systemFontOfSize:12];
+    hud.detailsLabel.numberOfLines = 0 ;
 }
 
 +(void)commonConfigLoadingHud:(MBProgressHUD *)hud
 {
-    hud.margin = 15 ;
-    hud.marginV = 15 ;
+    
+   
+    hud.contentColor = [UIColor whiteColor];
+    
+    hud.margin = 20 ;
+    hud.marginV = 20 ;
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.bezelView.backgroundColor = [UIColor colorWithHexString:@"6f6f6f"];
     hud.label.textColor = [UIColor colorWithHexString:@"ffffff"];
     hud.label.font = [UIFont systemFontOfSize:15];
     hud.label.numberOfLines = 0 ;
+    
+    hud.detailsLabel.textColor = [UIColor colorWithHexString:@"ffffff"];
+    hud.detailsLabel.font = [UIFont systemFontOfSize:12];
+    hud.detailsLabel.numberOfLines = 0 ;
+    
 }
+
+
+
+
+
+
+
 
 @end
