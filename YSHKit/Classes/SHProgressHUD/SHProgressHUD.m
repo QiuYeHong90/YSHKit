@@ -7,7 +7,7 @@
 //
 #define kAppWindow          [UIApplication sharedApplication].delegate.window
 #import "YYKit.h"
-#import "MBProgressHUD.h"
+
 #import "SHProgressHUD.h"
 @interface SHProgressHUD()
 @property (atomic, assign) BOOL canceled;

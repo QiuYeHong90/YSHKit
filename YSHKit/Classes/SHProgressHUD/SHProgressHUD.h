@@ -7,6 +7,7 @@
 //
 
 
+#import "MBProgressHUD.h"
 #import <Foundation/Foundation.h>
 
 @interface SHProgressHUD : NSObject
