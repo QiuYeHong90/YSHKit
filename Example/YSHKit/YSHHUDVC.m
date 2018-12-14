@@ -28,6 +28,10 @@
                                @{
                                    @"title":@"错误提示",
                                    @"toVC":@"HUDVC",
+                                   },
+                               @{
+                                   @"title":@"加载load",
+                                   @"toVC":@"HUDVC",
                                    }
                                ]];
     
@@ -55,8 +59,29 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary * dict = self.dataArray[indexPath.row];
-    [SHProgressHUD showError:@"错误提示"];
+   
+    
+   
+        
+        switch (indexPath.row) {
+            case 0:
+            {
+                [SHProgressHUD showError:@"错误提示"];
+            }
+                break;
+                
+                
+            default:
+            {
+                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                // Set the bar determinate mode to show task progress.
+                hud.mode = MBProgressHUDModeIndeterminate;
+//                [SHProgressHUD commonConfigHud:hud];
+//                hud.label.text = NSLocalizedString(@"视频保存中", nil);
+            }
+                break;
+        }
+    
 }
 /*
 #pragma mark - Navigation

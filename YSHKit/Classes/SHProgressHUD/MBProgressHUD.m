@@ -96,7 +96,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
     _animationType = MBProgressHUDAnimationFade;
     _mode = MBProgressHUDModeIndeterminate;
     _margin = 20.0f;
-    _marginV = 5.f;
+    _marginV = 20.f;
     _opacity = 1.f;
     _defaultMotionEffectsEnabled = YES;
 

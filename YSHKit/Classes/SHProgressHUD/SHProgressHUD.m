@@ -334,5 +334,15 @@
     hud.label.numberOfLines = 0 ;
 }
 
++(void)commonConfigLoadingHud:(MBProgressHUD *)hud
+{
+    hud.margin = 15 ;
+    hud.marginV = 15 ;
+    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = [UIColor colorWithHexString:@"6f6f6f"];
+    hud.label.textColor = [UIColor colorWithHexString:@"ffffff"];
+    hud.label.font = [UIFont systemFontOfSize:15];
+    hud.label.numberOfLines = 0 ;
+}
 
 @end
