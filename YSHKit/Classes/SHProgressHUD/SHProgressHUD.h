@@ -45,4 +45,11 @@
  @param error 错误信息
  */
 + (void)showErrorKeWin:(NSString *)error;
+
+/**
+ 配置hud
+
+ @param hud 样式hud
+ */
++(void)commonConfigHud:(MBProgressHUD *)hud;
 @end
