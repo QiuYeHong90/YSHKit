@@ -21,6 +21,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		85B6F2F6FF21D48D577C9145 /* Pods_YSHKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170EC606345104B6C704FB7A /* Pods_YSHKit_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -37,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C180EBA51874D85796C0C2F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0C180EBA51874D85796C0C2F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		170EC606345104B6C704FB7A /* Pods_YSHKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSHKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C3E2FC77DB34CAF4A95791 /* Pods-YSHKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSHKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSHKit_Tests/Pods-YSHKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EF3E5A3CEB03D8DF726EF08 /* Pods-YSHKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSHKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSHKit_Tests/Pods-YSHKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,12 +61,14 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		707C5AE821C22AA7008C0DE9 /* YSHHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHHUDVC.h; sourceTree = "<group>"; };
+		707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHHUDVC.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		744CEED03C4329B7F9CCF8B0 /* Pods_YSHKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSHKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F4452C25834774E85E47B /* Pods-YSHKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSHKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSHKit_Example/Pods-YSHKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7DF487D70ABD88E0CD4BD553 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7DF487D70ABD88E0CD4BD553 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		95A5693CC51579F4D0D607EB /* YSHKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YSHKit.podspec; path = ../YSHKit.podspec; sourceTree = "<group>"; };
+		95A5693CC51579F4D0D607EB /* YSHKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YSHKit.podspec; path = ../YSHKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C73106ECE286716606CB9E1E /* Pods-YSHKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSHKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSHKit_Example/Pods-YSHKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,7 @@
 		6003F593195388D20070C39A /* Example for YSHKit */ = {
 			isa = PBXGroup;
 			children = (
+				707C5AE721C22A7E008C0DE9 /* templete */,
 				6003F59C195388D20070C39A /* YSHAppDelegate.h */,
 				6003F59D195388D20070C39A /* YSHAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -194,6 +198,15 @@
 				0C180EBA51874D85796C0C2F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		707C5AE721C22A7E008C0DE9 /* templete */ = {
+			isa = PBXGroup;
+			children = (
+				707C5AE821C22AA7008C0DE9 /* YSHHUDVC.h */,
+				707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */,
+			);
+			name = templete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,12 +361,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YSHKit_Example/Pods-YSHKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/YSHKit/YSHKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YSHKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,6 +385,7 @@
 				6003F59E195388D20070C39A /* YSHAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YSHViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

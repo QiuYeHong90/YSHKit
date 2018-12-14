@@ -1,0 +1,25 @@
+PODS:
+  - YSHKit (0.0.1):
+    - YYKit (~> 1.0.9)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - YSHKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YYKit
+
+EXTERNAL SOURCES:
+  YSHKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YSHKit: 0b6b92c711fea8718bf3ca56f31f1cfc2ac27573
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 4a702144baeccaf1a23660bdb909eef510d076bb
+
+COCOAPODS: 1.5.3
