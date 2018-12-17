@@ -19,9 +19,17 @@
     "ios": "8.0"
   },
   "source_files": "YSHKit/Classes/**/*",
+  "resource_bundles": {
+    "YSHKit": [
+      "YSHKit/Assets/*"
+    ]
+  },
   "dependencies": {
     "YYKit": [
       "~> 1.0.9"
+    ],
+    "Masonry": [
+      "~> 1.1.0"
     ]
   }
 }

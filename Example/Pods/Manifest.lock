@@ -1,5 +1,7 @@
 PODS:
+  - Masonry (1.1.0)
   - YSHKit (0.0.1):
+    - Masonry (~> 1.1.0)
     - YYKit (~> 1.0.9)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -10,6 +12,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Masonry
     - YYKit
 
 EXTERNAL SOURCES:
@@ -17,7 +20,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YSHKit: 0b6b92c711fea8718bf3ca56f31f1cfc2ac27573
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YSHKit: 681db8cd3b19cfb396a009bf1f85d2a6097f10d9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 4a702144baeccaf1a23660bdb909eef510d076bb

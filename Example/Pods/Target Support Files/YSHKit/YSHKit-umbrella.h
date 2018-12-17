@@ -12,6 +12,8 @@
 
 #import "MBProgressHUD.h"
 #import "SHProgressHUD.h"
+#import "NSBundle+YSHKit.h"
+#import "YSHTextField.h"
 #import "YSHKit.h"
 
 FOUNDATION_EXPORT double YSHKitVersionNumber;

@@ -41,6 +41,10 @@
                                @{
                                    @"title":@"SHProgressHUD",
                                    @"toVC":@"YSHHUDVC",
+                                   },
+                               @{
+                                   @"title":@"YSHTextField",
+                                   @"toVC":@"YSHTextFieldVC",
                                    }
                                ]];
     

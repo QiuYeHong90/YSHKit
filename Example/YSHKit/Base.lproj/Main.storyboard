@@ -116,5 +116,43 @@
             </objects>
             <point key="canvasLocation" x="2006" y="166"/>
         </scene>
+        <!--Text FieldVC-->
+        <scene sceneID="8Ig-pv-b3G">
+            <objects>
+                <viewController storyboardIdentifier="YSHTextFieldVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0pt-bW-enI" customClass="YSHTextFieldVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Sd-z6-aCj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybj-RI-EPg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TCw-uD-c52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q8y-Qw-nTd" customClass="YSHTextField">
+                                <rect key="frame" x="50" y="70" width="275" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isNoLeftImage" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="styleUI">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Q8y-Qw-nTd" secondAttribute="trailing" constant="50" id="Qg5-aL-Lym"/>
+                            <constraint firstItem="Q8y-Qw-nTd" firstAttribute="leading" secondItem="TCw-uD-c52" secondAttribute="leading" constant="50" id="ivT-A9-Lwd"/>
+                            <constraint firstItem="Q8y-Qw-nTd" firstAttribute="top" secondItem="2Sd-z6-aCj" secondAttribute="bottom" constant="50" id="nHY-lt-Gcd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KlX-au-7Kd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggg-5D-aMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.5999999999999" y="841.52923538230891"/>
+        </scene>
     </scenes>
 </document>

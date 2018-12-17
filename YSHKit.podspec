@@ -32,12 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'YSHKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'YSHKit' => ['YSHKit/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'YSHKit' => ['YSHKit/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 #   s.dependency 'MarqueeLabel'
     s.dependency 'YYKit', '~> 1.0.9'
+    s.dependency 'Masonry', '~> 1.1.0'
 end
