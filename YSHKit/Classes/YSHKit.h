@@ -7,6 +7,8 @@
 
 #ifndef YSHKit_h
 #define YSHKit_h
+
+#import "SDPhotoBrowser.h"
 #import "YSHTextField.h"
 #import "SHProgressHUD.h"
 #import "MBProgressHUD.h"

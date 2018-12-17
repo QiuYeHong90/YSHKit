@@ -45,7 +45,12 @@
                                @{
                                    @"title":@"YSHTextField",
                                    @"toVC":@"YSHTextFieldVC",
-                                   }
+                                   },
+                               @{
+                                   @"title":@"SDPhotoBrowser",
+                                   @"toVC":@"SDPhotoBrowserVC",
+                                   },
+                               
                                ]];
     
     self.tableView.delegate = self;

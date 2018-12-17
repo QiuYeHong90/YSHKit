@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "SDBrowserImageView.h"
+#import "SDPhotoBrowser.h"
+#import "SDPhotoBrowserConfig.h"
+#import "SDWaitingView.h"
 #import "MBProgressHUD.h"
 #import "SHProgressHUD.h"
 #import "NSBundle+YSHKit.h"
