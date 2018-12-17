@@ -7,7 +7,7 @@
 
 #ifndef YSHKit_h
 #define YSHKit_h
-//#import "YSHTextField.h"
+#import "YSHTextField.h"
 #import "SHProgressHUD.h"
 #import "MBProgressHUD.h"
 #endif /* YSHKit_h */
