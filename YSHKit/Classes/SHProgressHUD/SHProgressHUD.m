@@ -39,17 +39,17 @@
 
 
 #pragma mark - 风火轮/菊花
-+(void)showSingleWheelInView:(UIView *)view{
-    [self showSingeWheelWithMsg:nil view:view];
++(MBProgressHUD *)showSingleWheelInView:(UIView *)view{
+   return [self showSingeWheelWithMsg:nil view:view];
 }
 #pragma mark - 简单的菊花加上简单的文字
-+(void)showSingeWheelWithMsg:(NSString *)msg view:(UIView *)view{
++(MBProgressHUD *)showSingeWheelWithMsg:(NSString *)msg view:(UIView *)view{
     
-    [self showSingleWheelWithSingelMsg:msg detailMsg:nil view:view];
+   return [self showSingleWheelWithSingelMsg:msg detailMsg:nil view:view];
     
 }
 #pragma mark - 简单的菊花加上简单的文字和复杂的文字
-+(void)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view
++(MBProgressHUD *)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view
 {
     
         //    先隐藏其他hud
@@ -61,6 +61,8 @@
         [self commonConfigLoadingHud:hud];
         [SHProgressHUD shareManager].bgView = view ;
     
+    
+    return hud;
     
     
 }

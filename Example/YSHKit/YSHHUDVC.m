@@ -83,9 +83,9 @@
                 break;
             case 1:
             {
-                [SHProgressHUD showSingleWheelInView:self.view];
+                MBProgressHUD * hud =  [SHProgressHUD showSingleWheelInView:self.view];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [SHProgressHUD hideHUD];
+                    [hud hideAnimated:YES];
                 });
                 
             }

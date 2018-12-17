@@ -19,14 +19,14 @@
 
  @param view 添加的视图层
  */
-+(void)showSingleWheelInView:(UIView *)view;
++(MBProgressHUD *)showSingleWheelInView:(UIView *)view;
 /**
  简单的菊花加上简单的文字
 
  @param msg 消息
  @param view 父视图
  */
-+(void)showSingeWheelWithMsg:(NSString *)msg view:(UIView *)view;
++(MBProgressHUD *)showSingeWheelWithMsg:(NSString *)msg view:(UIView *)view;
 
 /**
   简单的菊花加上简单的文字和复杂的文字
@@ -35,7 +35,7 @@
  @param detailMsg 子消息
  @param view 父视图
  */
-+(void)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view;
++(MBProgressHUD *)showSingleWheelWithSingelMsg:(NSString *)msg detailMsg:(NSString *)detailMsg view:(UIView *)view;
 /**
  蛋糕状读条器
 
