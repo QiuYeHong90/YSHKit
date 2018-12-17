@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29A421C7497C00A9947F /* YSHTextFieldVC.m */; };
+		700B29AE21C773BF00A9947F /* YDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29AD21C773BF00A9947F /* YDTextField.m */; };
 		707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		85B6F2F6FF21D48D577C9145 /* Pods_YSHKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170EC606345104B6C704FB7A /* Pods_YSHKit_Tests.framework */; };
@@ -64,6 +65,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		700B29A321C7497C00A9947F /* YSHTextFieldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHTextFieldVC.h; sourceTree = "<group>"; };
 		700B29A421C7497C00A9947F /* YSHTextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHTextFieldVC.m; sourceTree = "<group>"; };
+		700B29AC21C773BB00A9947F /* YDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextField.h; sourceTree = "<group>"; };
+		700B29AD21C773BF00A9947F /* YDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextField.m; sourceTree = "<group>"; };
 		707C5AE821C22AA7008C0DE9 /* YSHHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHHUDVC.h; sourceTree = "<group>"; };
 		707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHHUDVC.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 		6003F593195388D20070C39A /* Example for YSHKit */ = {
 			isa = PBXGroup;
 			children = (
+				700B29AC21C773BB00A9947F /* YDTextField.h */,
+				700B29AD21C773BF00A9947F /* YDTextField.m */,
 				707C5AE721C22A7E008C0DE9 /* templete */,
 				6003F59C195388D20070C39A /* YSHAppDelegate.h */,
 				6003F59D195388D20070C39A /* YSHAppDelegate.m */,
@@ -391,6 +396,7 @@
 			files = (
 				6003F59E195388D20070C39A /* YSHAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* YSHViewController.m in Sources */,
+				700B29AE21C773BF00A9947F /* YDTextField.m in Sources */,
 				700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */,
