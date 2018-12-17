@@ -207,6 +207,7 @@
         
         
     }else{
+        self.leftView.width = 25;
         self.leftView1.imageView.hidden = NO;
     }
 }
