@@ -5,7 +5,7 @@
 //  Created by aier on 15-2-6.
 //  Copyright (c) 2015年 GSD. All rights reserved.
 //
-
+#define kAppWindow          [UIApplication sharedApplication].delegate.window
 #import "SDBrowserImageView.h"
 #import "UIImageView+WebCache.h"
 #import "SDPhotoBrowserConfig.h"

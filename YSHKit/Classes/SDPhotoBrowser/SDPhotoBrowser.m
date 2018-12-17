@@ -5,7 +5,7 @@
 //  Created by aier on 15-2-3.
 //  Copyright (c) 2015年 袁书辉. All rights reserved.
 //
-
+#define kAppWindow          [UIApplication sharedApplication].delegate.window
 #define ZL_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define ZL_IS_IPHONE_X (ZL_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 812.0f)
 #import "SDPhotoBrowser.h"
