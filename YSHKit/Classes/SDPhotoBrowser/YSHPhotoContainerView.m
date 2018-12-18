@@ -232,14 +232,14 @@ const NSInteger img_MaxNum = 9 ;
     self.CallBlock = callBlock ;
     
     
-    [self updateMoreImgHight];
+    [self updateMoreImgHight:NO];
     return;
     
     
 }
 
 
--(void)updateMoreImgHight
+-(void)updateMoreImgHight:(BOOL)isRead
 {
     
     CGFloat itemW ,itemH;
@@ -343,7 +343,7 @@ const NSInteger img_MaxNum = 9 ;
     
     
     if (self.CallBlock) {
-        self.CallBlock(h,YES);
+        self.CallBlock(h,isRead);
     }
     
 }
@@ -355,7 +355,7 @@ const NSInteger img_MaxNum = 9 ;
     
     
     
-    [self updateMoreImgHight];
+    [self updateMoreImgHight:YES];
     
     
 }
