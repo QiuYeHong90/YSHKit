@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SDPhotoBrowserVC : UIViewController
 @property (weak, nonatomic) IBOutlet DYPhotoContainerView *jjjjssss;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *jjjjsss_h;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

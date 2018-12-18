@@ -249,19 +249,23 @@ const NSInteger img_MaxNum = 9 ;
     
     
     if (self.isOpen == NO) {
-        [_picPathStringsArray enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        BOOL flag = _picPathStringsArray.count>img_MaxNum ;
+        NSInteger imgCount = flag?img_MaxNum:_picPathStringsArray.count ;
+        for (NSInteger idx = 0; idx< imgCount; idx++) {
+            NSString * obj = nil;
             long columnIndex = idx % perRowItemCount;
             long rowIndex = idx / perRowItemCount;
             UIImageView *imageView = [self.imageViewsArray objectAtIndex:idx];
             imageView.hidden = NO;
-            [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
-            
             imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
-            
-            if (idx==8) {
-                [imageView removeAllSubviews];
-                if (_picPathStringsArray.count>img_MaxNum) {
-                    if (self.isOpen==NO) {
+            [imageView removeAllSubviews];
+            if (idx<_picPathStringsArray.count) {
+                obj = _picPathStringsArray [idx];
+                
+                if (idx==8) {
+                    [imageView removeAllSubviews];
+                    if (flag) {
+                        
                         
                         UIImageView * moreImgView = [UIImageView new];
                         if (self.moreImg) {
@@ -276,7 +280,11 @@ const NSInteger img_MaxNum = 9 ;
                             make.left.right.bottom.top.equalTo(@0);
                         }];
                         
+                        
                     }
+                }
+                if (obj) {
+                    [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
                 }
             }
             
@@ -284,7 +292,8 @@ const NSInteger img_MaxNum = 9 ;
             
             
             
-        }];
+        }
+        
     }else{
         
         BOOL flag = _picPathStringsArray.count>img_MaxNum ;
@@ -307,7 +316,7 @@ const NSInteger img_MaxNum = 9 ;
                 if (self.shouQiImg) {
                     imageView.image = self.shouQiImg ;
                 }else{
-                     imageView.image = [NSBundle ysh_imageName:@"shouqitupian"];
+                    imageView.image = [NSBundle ysh_imageName:@"shouqitupian"];
                 }
                 
             }
@@ -318,11 +327,6 @@ const NSInteger img_MaxNum = 9 ;
             
             
             
-            
-            
-            if (flag) {
-                
-            }
         }
     }
     
