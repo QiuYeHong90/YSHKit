@@ -435,7 +435,10 @@ const NSInteger img_MaxNum = 9 ;
 
 
 
-
+-(void)tapVideo:(UIImage *)thumbImage
+{
+    
+}
 
 #pragma mark - private actions
 
@@ -443,9 +446,8 @@ const NSInteger img_MaxNum = 9 ;
 {
     
     if (self.isVideo) {
-        
-        NSLog(@"----tap 视频");
-        
+        UIImageView  *imageView = (UIImageView  *)tap.view;
+        [self tapVideo:imageView.image];
         
     }else{
         
@@ -457,13 +459,18 @@ const NSInteger img_MaxNum = 9 ;
                 
                 
                 self.isOpen = YES ;
-                
+                if (self.CallBackIsOpenImgs) {
+                    self.CallBackIsOpenImgs(self.isOpen);
+                }
                 return ;
             }
         }
         if (imageView.tag >= self.picPathStringsArray.count) {
             //            收起
             self.isOpen = NO ;
+            if (self.CallBackIsOpenImgs) {
+                self.CallBackIsOpenImgs(self.isOpen);
+            }
             return ;
         }
         

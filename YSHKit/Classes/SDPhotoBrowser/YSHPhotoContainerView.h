@@ -44,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
  收起的图片
  */
 @property (nonatomic,strong) IBInspectable UIImage * shouQiImg;
+
+@property (nonatomic,copy) void (^CallBackIsOpenImgs)(BOOL isOpen);
+-(void)tapVideo:(UIImage *)thumbImage;
 @end
 
 NS_ASSUME_NONNULL_END
