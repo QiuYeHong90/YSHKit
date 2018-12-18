@@ -349,17 +349,6 @@ const NSInteger img_MaxNum = 9 ;
 }
 
 
--(void)setIsOpen:(BOOL)isOpen
-{
-    _isOpen = isOpen ;
-    
-    
-    
-    [self updateMoreImgHight:NO];
-    
-    
-}
-
 
 
 /**
