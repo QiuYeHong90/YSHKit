@@ -14,6 +14,7 @@
 #import "SDPhotoBrowser.h"
 #import "SDPhotoBrowserConfig.h"
 #import "SDWaitingView.h"
+#import "YSHPhotoContainerView.h"
 #import "MBProgressHUD.h"
 #import "SHProgressHUD.h"
 #import "NSBundle+YSHKit.h"

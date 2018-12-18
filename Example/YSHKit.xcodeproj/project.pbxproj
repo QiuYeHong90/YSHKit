@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29A421C7497C00A9947F /* YSHTextFieldVC.m */; };
 		700B29AE21C773BF00A9947F /* YDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29AD21C773BF00A9947F /* YDTextField.m */; };
+		70796B4321C891C00086190B /* DYPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70796B4221C891C00086190B /* DYPhotoContainerView.m */; };
 		707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */; };
 		709ABF8921C79F330078B4D7 /* SDPhotoBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 709ABF8821C79F330078B4D7 /* SDPhotoBrowserVC.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
@@ -68,6 +69,8 @@
 		700B29A421C7497C00A9947F /* YSHTextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHTextFieldVC.m; sourceTree = "<group>"; };
 		700B29AC21C773BB00A9947F /* YDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextField.h; sourceTree = "<group>"; };
 		700B29AD21C773BF00A9947F /* YDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextField.m; sourceTree = "<group>"; };
+		70796B4121C891C00086190B /* DYPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPhotoContainerView.h; sourceTree = "<group>"; };
+		70796B4221C891C00086190B /* DYPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPhotoContainerView.m; sourceTree = "<group>"; };
 		707C5AE821C22AA7008C0DE9 /* YSHHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHHUDVC.h; sourceTree = "<group>"; };
 		707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHHUDVC.m; sourceTree = "<group>"; };
 		709ABF8721C79F330078B4D7 /* SDPhotoBrowserVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserVC.h; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 		6003F593195388D20070C39A /* Example for YSHKit */ = {
 			isa = PBXGroup;
 			children = (
+				70796B4021C891C00086190B /* DYPhotoContainerView */,
 				700B29AC21C773BB00A9947F /* YDTextField.h */,
 				700B29AD21C773BF00A9947F /* YDTextField.m */,
 				707C5AE721C22A7E008C0DE9 /* templete */,
@@ -209,6 +213,15 @@
 				0C180EBA51874D85796C0C2F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		70796B4021C891C00086190B /* DYPhotoContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				70796B4121C891C00086190B /* DYPhotoContainerView.h */,
+				70796B4221C891C00086190B /* DYPhotoContainerView.m */,
+			);
+			path = DYPhotoContainerView;
 			sourceTree = "<group>";
 		};
 		707C5AE721C22A7E008C0DE9 /* templete */ = {
@@ -407,6 +420,7 @@
 				700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */,
+				70796B4321C891C00086190B /* DYPhotoContainerView.m in Sources */,
 				709ABF8921C79F330078B4D7 /* SDPhotoBrowserVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

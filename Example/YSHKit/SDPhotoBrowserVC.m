@@ -17,8 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.jjjjssss.maxNum = 99 ;
     
-    
+    NSMutableArray * tempArr = @[].mutableCopy;
+    for (NSInteger i =0 ; i<self.jjjjssss.maxNum-50 ; i++) {
+        [tempArr addObject:@"http://img2.3lian.com/2014/f4/140/d/72.jpg"];
+    }
+    __weak typeof(self) weakSelf = self ;
+    [self.jjjjssss picPathStringsArray:tempArr callBlock:^(CGFloat h, BOOL isReload) {
+        weakSelf.jjjjsss_h.constant = h ;
+    }];
     
 }
 
