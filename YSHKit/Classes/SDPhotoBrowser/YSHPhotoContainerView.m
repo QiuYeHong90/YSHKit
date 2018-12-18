@@ -355,7 +355,7 @@ const NSInteger img_MaxNum = 9 ;
     
     
     
-    [self updateMoreImgHight:YES];
+    [self updateMoreImgHight:NO];
     
     
 }
