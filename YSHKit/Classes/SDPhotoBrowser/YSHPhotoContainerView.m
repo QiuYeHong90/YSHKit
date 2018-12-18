@@ -343,7 +343,7 @@ const NSInteger img_MaxNum = 9 ;
     
     
     if (self.CallBlock) {
-        self.CallBlock(h,NO);
+        self.CallBlock(h,YES);
     }
     
 }
