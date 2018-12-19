@@ -60,6 +60,7 @@ const NSInteger img_MaxNum = 9 ;
 - (void)setup
 {
     
+    self.isLoadImg = YES ;
     self.maxNum = img_MaxNum ;
     
     self.backgroundColor = [UIColor clearColor];
@@ -105,8 +106,12 @@ const NSInteger img_MaxNum = 9 ;
     self.picPathStringsArray = picPathStringsArray;
     
     for (long i = _picPathStringsArray.count; i < self.imageViewsArray.count; i++) {
-        UIImageView *imageView = [self.imageViewsArray objectAtIndex:i];
-        imageView.hidden = YES;
+        @autoreleasepool {
+            UIImageView *imageView = [self.imageViewsArray objectAtIndex:i];
+            imageView.image = nil;
+            imageView.hidden = YES;
+        }
+        
     }
     
     //    没有图片
@@ -284,7 +289,10 @@ const NSInteger img_MaxNum = 9 ;
                     }
                 }
                 if (obj) {
-                    [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
+                    if (self.isLoadImg) {
+                        [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
+                    }
+                    
                 }
             }
             
@@ -322,7 +330,10 @@ const NSInteger img_MaxNum = 9 ;
             }
             
             if (obj) {
-                [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
+                if (self.isLoadImg) {
+                    [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
+                }
+                
             }
             
             

@@ -47,9 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) void (^CallBackIsOpenImgs)(BOOL isOpen);
 
+
+
+@property (nonatomic,assign) BOOL isLoadImg;
 /**
  点击跳转视频播放
-
+ 
  @param thumbImage 封面图
  */
 -(void)tapVideo:(UIImage *)thumbImage;
