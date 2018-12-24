@@ -111,15 +111,60 @@
 -(void)setStyleUI:(NSInteger)styleUI
 {
     _styleUI = styleUI ;
+    
+    
+    
+    [self updateStyle];
+}
+
+-(void)initUI
+{
+    self.layer.borderWidth = 1;
+    self.layer.borderColor = [UIColor colorWithHexString:@"e6e6e6"].CGColor;
+    self.borderStyle = UITextBorderStyleNone;
+    
+    
+}
+
+
+
+-(void)paswordOpenEyes
+{
+    if (self.secureTextEntry) {
+        
+        self.rightImg = [NSBundle ysh_imageName:@"biyan"];
+    }else{
+        self.rightImg = [NSBundle ysh_imageName:@"zhengyan"];
+    }
+}
+
+-(void)setIsNoLeftImage:(BOOL)isNoLeftImage
+{
+    _isNoLeftImage = isNoLeftImage;
+    [self updateStyle];
+}
+
+-(void)setIsHaveRightImg:(BOOL)isHaveRightImg
+{
+    _isHaveRightImg = isHaveRightImg;
+    
+    [self updateStyle];
+}
+
+
+
+-(void)updateStyle
+{
+    //    风格
     switch (self.styleUI) {
-        case YDTextFieldStyleUIDefault:
+            case YDTextFieldStyleUIDefault:
         {
             self.layer.borderWidth = 1;
             self.layer.borderColor = [UIColor colorWithHexString:@"e6e6e6"].CGColor;
             self.borderStyle = UITextBorderStyleNone;
         }
             break;
-        case YDTextFieldStyleUI1:
+            case YDTextFieldStyleUI1:
         {
             
             
@@ -144,56 +189,9 @@
             break;
     }
     
-    [self updateStyle];
-}
-
--(void)initUI
-{
-    self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor colorWithHexString:@"e6e6e6"].CGColor;
-    self.borderStyle = UITextBorderStyleNone;
-    
-}
-
-
-
--(void)paswordOpenEyes
-{
-    if (self.secureTextEntry) {
-       
-        self.rightImg = [NSBundle ysh_imageName:@"biyan"];
-    }else{
-        self.rightImg = [NSBundle ysh_imageName:@"zhengyan"];
-    }
-}
-
--(void)setIsNoLeftImage:(BOOL)isNoLeftImage
-{
-    _isNoLeftImage = isNoLeftImage;
-    [self updateStyle];
-}
-
--(void)setIsHaveRightImg:(BOOL)isHaveRightImg
-{
-    _isHaveRightImg = isHaveRightImg;
-    if (isHaveRightImg==YES) {
-        
-        self.rightView.width = 25;
-        self.rightView1.imageView.hidden = NO;
-        
-    }else{
-        self.rightView.width = 5;
-        self.rightView1.imageView.hidden = YES;
-    }
     
     
-    
-}
-
-
-
--(void)updateStyle
-{
+    //    左边图片
     if (self.isNoLeftImage==YES) {
         
         if (self.styleUI == 1 ) {
@@ -210,6 +208,19 @@
         self.leftView.width = 25;
         self.leftView1.imageView.hidden = NO;
     }
+    
+    
+    //    右边的图片
+    if (self.isHaveRightImg==YES) {
+        
+        self.rightView.width = 25;
+        self.rightView1.imageView.hidden = NO;
+        
+    }else{
+        self.rightView.width = 5;
+        self.rightView1.imageView.hidden = YES;
+    }
+    
 }
 
 -(void)layoutSubviews

@@ -23,12 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
  是否有右边图片
  */
 @property (nonatomic,assign) IBInspectable BOOL isHaveRightImg;
-
+@property (nonatomic,assign) IBInspectable NSInteger styleUI;
 
 @property (nonatomic,strong) IBInspectable UIImage * leftImg;
 @property (nonatomic,strong) IBInspectable UIImage * rightImg;
 
-@property (nonatomic,assign) IBInspectable NSInteger styleUI;
+
 
 @end
 
