@@ -8,6 +8,7 @@
 #ifndef YSHKit_h
 #define YSHKit_h
 
+#import "YSHCodeCountryInputView.h"
 #import "YSHPhotoContainerView.h"
 #import "SDPhotoBrowser.h"
 #import "YSHTextField.h"
