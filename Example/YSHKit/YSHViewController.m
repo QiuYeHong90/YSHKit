@@ -50,7 +50,10 @@
                                    @"title":@"SDPhotoBrowser",
                                    @"toVC":@"SDPhotoBrowserVC",
                                    },
-                               
+                               @{
+                                   @"title":@"国家代码",
+                                   @"toVC":@"YSHCodeCountryViewController",
+                                   },
                                ]];
     
     self.tableView.delegate = self;

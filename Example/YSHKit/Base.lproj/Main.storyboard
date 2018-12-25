@@ -48,6 +48,7 @@
                     <connections>
                         <outlet property="tableView" destination="iRp-Wu-of5" id="PnX-4S-tHV"/>
                         <segue destination="xbB-lI-CYl" kind="push" id="6aN-p6-Rkz"/>
+                        <segue destination="mjG-zz-led" kind="push" id="cum-BX-CZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,5 +227,44 @@
             </objects>
             <point key="canvasLocation" x="2005.5999999999999" y="1513.4932533733136"/>
         </scene>
+        <!--Code Country View Controller-->
+        <scene sceneID="Szc-8d-lt9">
+            <objects>
+                <viewController storyboardIdentifier="YSHCodeCountryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mjG-zz-led" customClass="YSHCodeCountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LgE-v2-ghq"/>
+                        <viewControllerLayoutGuide type="bottom" id="T6E-uJ-4gs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f5f-JE-8FN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OmK-eF-qbv" customClass="YSHCodeCountryInputView">
+                                <rect key="frame" x="15" y="79" width="345" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bYK-v1-ZbJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightRowImg" value="right_row"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OmK-eF-qbv" firstAttribute="leading" secondItem="f5f-JE-8FN" secondAttribute="leading" constant="15" id="4SV-SE-Zcs"/>
+                            <constraint firstItem="OmK-eF-qbv" firstAttribute="top" secondItem="LgE-v2-ghq" secondAttribute="bottom" constant="15" id="n5z-2b-9uY"/>
+                            <constraint firstAttribute="trailing" secondItem="OmK-eF-qbv" secondAttribute="trailing" constant="15" id="vmq-wm-fNy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TLq-xK-n1q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fIl-hT-9Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.5999999999999" y="-549.17541229385313"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="right_row" width="7.5" height="13"/>
+    </resources>
 </document>
