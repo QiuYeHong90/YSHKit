@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,strong) UIView * bottomView;
 /**
+ 横线
+ */
+@property (nonatomic,strong) UIView * bottom_lineView;
+/**
  标题
  */
 @property (nonatomic,strong) UILabel * ysh_titleLab;

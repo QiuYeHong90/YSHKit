@@ -14,13 +14,9 @@
 #import "YSHCodeCountryInputView.h"
 
 @interface YSHCodeCountryInputView ()
-@property (nonatomic,strong) UIView * topView;
-@property (nonatomic,strong) UIView * bottomView;
 
-/**
- 横线
- */
-@property (nonatomic,strong) UIView * bottom_lineView;
+
+
 
 
 
