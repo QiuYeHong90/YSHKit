@@ -5,6 +5,9 @@
 //  Created by shuhui on 2018/12/25.
 //  Copyright © 2018 793983383@qq.com. All rights reserved.
 //
+
+#define ZL_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define ZL_IS_IPHONE_X (ZL_IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 812.0f)
 #import "NSBundle+YSHKit.h"
 #import <Masonry/Masonry.h>
 #import "YSHCountryCodeViewController.h"
@@ -37,7 +40,7 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,ZL_IS_IPHONE_X?88:64, [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
     }
     
     return _tableView;
@@ -55,12 +58,13 @@
 {
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(@0);
+        make.left.right.bottom.equalTo(@0);
+        make.top.equalTo(@(ZL_IS_IPHONE_X?88:64));
     }];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-//    self.automaticallyAdjustsScrollViewInsets = NO;//不加的话，table会下移
-//    self.edgesForExtendedLayout = UIRectEdgeNone;//不加的话，UISearchBar返回后会上移
+    self.automaticallyAdjustsScrollViewInsets = NO;//不加的话，table会下移
+    //    self.edgesForExtendedLayout = UIRectEdgeNone;//不加的话，UISearchBar返回后会上移
     
     UIImage * image =[NSBundle ysh_imageName:@"back"];
     UIImage * newImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -266,7 +270,7 @@
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
     NSLog(@"didDismissSearchController");
-       
+    
 }
 
 - (void)presentSearchController:(UISearchController *)searchController {
@@ -276,13 +280,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
