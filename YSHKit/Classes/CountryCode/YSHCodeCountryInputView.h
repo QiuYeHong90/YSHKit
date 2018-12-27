@@ -13,6 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YSHCodeCountryInputView : UIView
 
 /**
+ 顶部视图
+ */
+@property (nonatomic,strong) UIView * topView;
+
+/**
+ 底部视图
+ */
+@property (nonatomic,strong) UIView * bottomView;
+/**
  标题
  */
 @property (nonatomic,strong) UILabel * ysh_titleLab;
