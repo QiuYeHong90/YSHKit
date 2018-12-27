@@ -197,7 +197,7 @@
 -(void)ysh_initUI
 {
     __weak typeof(self) weakSelf = self;
-
+    
     self.backgroundColor = [UIColor whiteColor];
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(@0);
@@ -209,7 +209,7 @@
         make.height.equalTo(weakSelf.topView.mas_height);
         
     }];
-   
+    
     
     [self.ysh_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@10);
@@ -220,7 +220,7 @@
     [self.ysh_areaLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(weakSelf.ysh_titleLab.mas_right).offset(15);
         make.centerY.equalTo(weakSelf.topView);
-
+        
         
     }];
     self.ysh_rightView.backgroundColor = UIColor.whiteColor;
@@ -235,12 +235,12 @@
         make.centerY.equalTo(weakSelf.topView);
         
     }];
-//    bottomView 子控件
+    //    bottomView 子控件
     
     [self.ysh_codeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@25);
         make.width.equalTo(@60);
-//        make.height.equalTo(@30);
+        //        make.height.equalTo(@30);
         make.centerY.equalTo(weakSelf.bottomView);
     }];
     
@@ -255,10 +255,10 @@
         make.left.equalTo(weakSelf.bottom_lineView.mas_right).offset(5);
         make.right.equalTo(@-5);
         make.centerY.equalTo(weakSelf.bottomView);
-
+        
     }];
     
-//    颜色
+    //    颜色
     {
         _topView.layer.borderColor = self.lineColor.CGColor;
         self.bottomView.layer.borderColor = self.lineColor.CGColor;
@@ -268,7 +268,7 @@
 
 -(void)initUI
 {
-
+    
     YSHCountryCodeModel * model = [YSHCountryCodeTool shareCountryCodeTool].curretnCountryModel;
     self.ysh_codeTextField.text =  [NSString stringWithFormat:@"%@",model.dial_code];
     self.ysh_areaLab.text = model.name;
@@ -342,7 +342,7 @@
     if (deftModel) {
         self.ysh_areaLab.text = deftModel.name;
         self.ysh_codeTextField.text = [NSString stringWithFormat:@"%@",deftModel.code];
-        self.ysh_phoneTextField.text = [NSString stringWithFormat:@"%@",phone];
+        self.ysh_phoneTextField.text = [NSString stringWithFormat:@"%@",deftModel.phone];
     }else{
         self.ysh_areaLab.text = NSLocalizedString(@"", nil);
         self.ysh_codeTextField.text = nil;
@@ -360,7 +360,7 @@
         NSArray * tempArr = [phone componentsSeparatedByString:@"-"];
         if (tempArr.count==2) {
             
-            NSString * phone = tempArr.lastObject;
+            NSString * phoneNum = tempArr.lastObject;
             
             NSString * presArea = [tempArr.firstObject stringByReplacingOccurrencesOfString:@"+" withString:@""];
             YSHCountryCodeModel * model  = [self getDefaultCountry:presArea];
@@ -369,7 +369,7 @@
             }
             
             
-            model.phone = phone;
+            model.phone = phoneNum;
             model.code = presArea;
             
             return model;
@@ -387,11 +387,11 @@
     
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end
