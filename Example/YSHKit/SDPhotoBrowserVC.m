@@ -11,10 +11,17 @@
 
 @interface SDPhotoBrowserVC ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (nonatomic,strong) NSMutableArray * dataArray;
 @end
 
 @implementation SDPhotoBrowserVC
-
+-(NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = @[].mutableCopy;
+    }
+    return _dataArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    // Do any additional setup after loading the view.
@@ -26,21 +33,56 @@
 //    self.jjjjssss.CallBackIsOpenImgs = ^(BOOL isOpen) {
 //        [weakSelf reloadUI:isOpen];
 //    };
+
+    for (NSInteger i = 0; i<50; i++) {
+        NSMutableArray * tempArr = @[].mutableCopy;
+        
+        for (NSInteger j =0 ; j<i ; j++) {
+            [tempArr addObject:@"http://img2.3lian.com/2014/f4/140/d/72.jpg"];
+        }
+        NSMutableDictionary * dict = @{
+                                @"imgArr":tempArr,
+                                @"isOpen":@(NO),
+                                }.mutableCopy;
+        [self.dataArray addObject:dict];
+    }
+    
+    [self.tableView reloadData];
+    
+    
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30 ;
+    return self.dataArray.count ;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YSHTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"YSHTableViewCell"];
     __weak typeof(self) weakSelf = self ;
-    self.jjjjssss = cell.dy_contentView ;
-    self.jjjjsss_h = cell.dy_contentView_h ;
-    [self reloadUI:NO];
+   
+    
+    NSMutableDictionary * dict = self.dataArray[indexPath.row];
+    
+    __weak YSHTableViewCell * weakCell = cell;
+    NSMutableArray * tempArr = dict[@"imgArr"];
+    cell.dy_contentView.isOpen = [dict[@"isOpen"] boolValue];
+    [cell.dy_contentView picPathStringsArray:tempArr callBlock:^(CGFloat h, BOOL isReload) {
+        if (isReload) {
+            [weakSelf.tableView reloadData];
+          
+        }else{
+            weakCell.dy_contentView_h.constant = h ;
+            [weakCell layoutIfNeeded];
+        }
+        
+    }];
+    
+    __block NSMutableDictionary * bDict = dict;
     cell.dy_contentView.CallBackIsOpenImgs = ^(BOOL isOpen) {
+        bDict[@"isOpen"] = @(isOpen);
         [weakSelf.tableView reloadData];
-        [weakSelf reloadUI:isOpen];
+        [weakSelf.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
     };
     
     return cell ;

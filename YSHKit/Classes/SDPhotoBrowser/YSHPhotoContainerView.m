@@ -19,7 +19,7 @@ const NSInteger img_MaxNum = 9 ;
 @interface YSHPhotoContainerView ()
 <SDPhotoBrowserDelegate>
 
-@property (nonatomic, strong) NSArray *imageViewsArray;
+@property (nonatomic, strong) NSMutableArray *imageViewsArray;
 
 @property (nonatomic,strong) UIImageView * playImgView;
 @property (nonatomic,copy) void (^CallBlock)(CGFloat h,BOOL isReload);
@@ -27,6 +27,15 @@ const NSInteger img_MaxNum = 9 ;
 
 @end
 @implementation YSHPhotoContainerView
+
+- (NSMutableArray *)imageViewsArray
+{
+    if (!_imageViewsArray) {
+        _imageViewsArray = @[].mutableCopy;
+    }
+    return _imageViewsArray;
+}
+
 
 -(UIImageView *)playImgView
 {
@@ -70,29 +79,30 @@ const NSInteger img_MaxNum = 9 ;
 
 -(void)setMaxNum:(NSInteger)maxNum
 {
-    
+   
     if (maxNum<=0) {
         maxNum = 9 ;
     }
-    
+
     _maxNum = maxNum ;
-    [self removeAllSubviews];
-    NSMutableArray *temp = [NSMutableArray new];
-    
-    for (int i = 0; i < _maxNum+1; i++) {
-        UIImageView *imageView = [UIImageView new];
-        [self addSubview:imageView];
-        imageView.userInteractionEnabled = YES;
-        imageView.clipsToBounds = YES;
-        imageView.tag = i;
-        imageView.backgroundColor = kCViewBgColor;
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
-        [imageView addGestureRecognizer:tap];
-        [temp addObject:imageView];
-    }
-    
-    self.imageViewsArray = [temp copy];
+//
+//    [self removeAllSubviews];
+//    NSMutableArray *temp = [NSMutableArray new];
+//
+//    for (int i = 0; i < _maxNum+1; i++) {
+//        UIImageView *imageView = [UIImageView new];
+//        [self addSubview:imageView];
+//        imageView.userInteractionEnabled = YES;
+//        imageView.clipsToBounds = YES;
+//        imageView.tag = i;
+//        imageView.backgroundColor = kCViewBgColor;
+//        imageView.contentMode = UIViewContentModeScaleAspectFill;
+//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
+//        [imageView addGestureRecognizer:tap];
+//        [temp addObject:imageView];
+//    }
+//
+//    self.imageViewsArray = [temp copy];
 }
 
 
@@ -104,15 +114,34 @@ const NSInteger img_MaxNum = 9 ;
     
     
     self.picPathStringsArray = picPathStringsArray;
-    
-    for (long i = _picPathStringsArray.count; i < self.imageViewsArray.count; i++) {
-        @autoreleasepool {
-            UIImageView *imageView = [self.imageViewsArray objectAtIndex:i];
-            imageView.image = nil;
-            imageView.hidden = YES;
+    if (self.picPathStringsArray.count+1>self.imageViewsArray.count) {
+        
+        for (long i = self.imageViewsArray.count; i<self.picPathStringsArray.count+1; i++) {
+            UIImageView *imageView = [UIImageView new];
+            [self addSubview:imageView];
+            imageView.userInteractionEnabled = YES;
+            imageView.clipsToBounds = YES;
+            imageView.tag = i;
+            imageView.backgroundColor = kCViewBgColor;
+            imageView.contentMode = UIViewContentModeScaleAspectFill;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
+            [imageView addGestureRecognizer:tap];
+            [self.imageViewsArray addObject:imageView];
         }
         
+    }else{
+        for (long i = _picPathStringsArray.count; i < self.imageViewsArray.count; i++) {
+            @autoreleasepool {
+                UIImageView *imageView = [self.imageViewsArray objectAtIndex:i];
+                imageView.image = nil;
+                imageView.hidden = YES;
+            }
+            
+        }
     }
+   
+    
+   
     
     //    没有图片
     
