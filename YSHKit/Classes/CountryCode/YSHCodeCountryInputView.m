@@ -240,7 +240,7 @@
         
     }];
 //    bottomView 子控件
-    self.ysh_codeTextField.text = @"86";
+    
     [self.ysh_codeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@25);
         make.width.equalTo(@60);
@@ -254,10 +254,10 @@
         make.width.equalTo(@1);
     }];
     
-    self.ysh_phoneTextField.text = @"15890061210";
+    
     [self.ysh_phoneTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(weakSelf.bottom_lineView.mas_right).offset(5);
-        make.right.equalTo(@-15);
+        make.right.equalTo(@-5);
         make.centerY.equalTo(weakSelf.bottomView);
 
     }];
