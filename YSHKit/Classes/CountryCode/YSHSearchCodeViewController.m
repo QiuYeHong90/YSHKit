@@ -88,8 +88,10 @@
     self.searchController.delegate = self;
     self.searchController.searchBar.delegate = self;
     [self.searchController.searchBar sizeToFit];
-    if (self.searchPlaceholder) {
-        self.searchController.searchBar.placeholder = self.searchPlaceholder;
+    YSHCountryCodeViewController * vc = self.navigationController;
+    if (vc.searchPlaceholder) {
+        
+        self.searchController.searchBar.placeholder = vc.searchPlaceholder;
     }else{
         self.searchController.searchBar.placeholder = NSLocalizedString(@"search", nil);
     }

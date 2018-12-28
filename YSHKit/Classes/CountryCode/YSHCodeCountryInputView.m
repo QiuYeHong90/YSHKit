@@ -97,7 +97,7 @@
         __weak typeof(self) weakSelf = self;
         [_topView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithActionBlock:^(id  _Nonnull sender) {
             YSHCountryCodeViewController * new = [YSHCountryCodeViewController new];
-            new.searchPlaceholder = self.searchPlaceholder;
+            new.searchPlaceholder = weakSelf.searchPlaceholder;
             new.title = weakSelf.ysh_titleLab.text ;
             new.CallBlock = ^(YSHCountryCodeModel *model) {
                 weakSelf.ysh_areaLab.text = model.name;
