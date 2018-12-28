@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSMutableArray * tableArray;
 
 @property (nonatomic,strong) NSArray * indexArray;
+
+/**
+ 搜索输入框
+ */
+@property (nonatomic,copy) NSString * searchPlaceholder;
 @end
 
 NS_ASSUME_NONNULL_END

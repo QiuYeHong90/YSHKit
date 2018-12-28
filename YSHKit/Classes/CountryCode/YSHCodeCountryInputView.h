@@ -60,7 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,strong) IBInspectable UIImage * rightRowImg;
 
-
+/**
+ 搜索输入placehodler
+ */
+@property (nonatomic,copy) NSString * searchPlaceholder;
 /**
  选择回调
  */

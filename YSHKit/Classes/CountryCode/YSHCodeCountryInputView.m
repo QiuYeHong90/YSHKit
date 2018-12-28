@@ -282,6 +282,7 @@
 {
     self.ysh_titleLab.text =  NSLocalizedString(@"国家/地区", nil);
     self.ysh_phoneTextField.placeholder = NSLocalizedString(@"输入联系方式", nil);
+    self.searchPlaceholder = NSLocalizedString(@"搜索", nil);
 }
 -(void)layoutSubviews
 {

@@ -88,8 +88,12 @@
     self.searchController.delegate = self;
     self.searchController.searchBar.delegate = self;
     [self.searchController.searchBar sizeToFit];
-    self.searchController.searchBar.placeholder = NSLocalizedString(@"搜索", nil);
-    //    self.searchController.searchBar.text = NSLocalizedString(@"默认搜索内容", nil);
+    if (self.searchPlaceholder) {
+        self.searchController.searchBar.placeholder = self.searchPlaceholder;
+    }else{
+        self.searchController.searchBar.placeholder = NSLocalizedString(@"search", nil);
+    }
+    
     
     //包着搜索框外层的颜色
     self.searchController.searchBar.tintColor = [UIColor colorWithRed:22.0/255 green:161.0/255 blue:1.0/255 alpha:1];
