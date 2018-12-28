@@ -42,8 +42,9 @@
 {
     
     [self setNavStyles];
-    
-    [self pushViewController:[YSHSearchCodeViewController new] animated:NO];
+    YSHSearchCodeViewController * toVC = [YSHSearchCodeViewController new];
+    toVC.searchPlaceholder = self.searchPlaceholder ;
+    [self pushViewController:toVC animated:NO];
 }
 
 //设置导航条样式

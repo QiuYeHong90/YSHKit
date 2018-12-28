@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YSHCountryCodeViewController : UINavigationController
 @property (nonatomic,copy) void(^CallBlock)(YSHCountryCodeModel * model);
+/**
+ 搜索输入placehodler
+ */
+@property (nonatomic,copy) NSString * searchPlaceholder;
 @end
 
 NS_ASSUME_NONNULL_END
