@@ -212,10 +212,10 @@ const NSInteger img_MaxNum = 9 ;
             
             
             //            开始加载图片
-            
-            if (DEBUG) {
-                NSLog(@"加载图片---%@",urlStr);
-            }
+#if DEBUG
+           NSLog(@"加载图片---%@",urlStr);
+#endif
+           
             [imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                 
                 
@@ -332,10 +332,10 @@ const NSInteger img_MaxNum = 9 ;
                 }
                 if (obj) {
                     if (self.isLoadImg) {
-                        if (DEBUG) {
-                            NSLog(@"加载图片---%@",obj);
-                        }
-                        
+                       
+#if DEBUG
+                        NSLog(@"加载图片---%@",obj);
+#endif
                         [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
                     }
                     
@@ -383,9 +383,9 @@ const NSInteger img_MaxNum = 9 ;
             if (obj) {
                 if (self.isLoadImg) {
                     
-                    if (DEBUG) {
-                        NSLog(@"加载图片---%@",obj);
-                    }
+#if DEBUG
+                    NSLog(@"加载图片---%@",obj);
+#endif
                     [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
                 }
                 
