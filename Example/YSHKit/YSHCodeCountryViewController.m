@@ -5,7 +5,7 @@
 //  Created by shuhui on 2018/12/25.
 //  Copyright © 2018 793983383@qq.com. All rights reserved.
 //
-
+#import <SDWebImage/SDImageCache.h>
 #import "YSHCodeCountryViewController.h"
 
 @interface YSHCodeCountryViewController ()
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        [[SDImageCache sharedImageCache] clearMemory];
+    }];
 }
 
 /*

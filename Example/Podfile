@@ -5,6 +5,9 @@ platform :ios, '8.0'
 target 'YSHKit_Example' do
   
   pod 'YSHKit', :path => '../'
+#  pod 'PLShortVideoKit'
+#  pod 'Qiniu'
+#  pod 'PLPlayerKit'
   target 'YSHKit_Tests' do
     inherit! :search_paths
 

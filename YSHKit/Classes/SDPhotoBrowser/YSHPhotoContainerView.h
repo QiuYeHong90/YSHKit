@@ -48,6 +48,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) void (^CallBackIsOpenImgs)(BOOL isOpen);
 
 
+/**
+ NSString * thumbnail = @"-thumbnail200";
+ 七牛后面拼接-thumbnail200 接口获取缩略图
+ */
+@property (nonatomic,copy) NSString * thumbnail ;
+
+/**
+ 是否使用图片后面拼接获取缩略图 默认不使用
+ */
+@property (nonatomic,assign) BOOL isUseThumbnail;
 
 @property (nonatomic,assign) BOOL isLoadImg;
 /**
@@ -56,6 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param thumbImage 封面图
  */
 -(void)tapVideo:(UIImage *)thumbImage;
+
+
+- (void)setup;
 @end
 
 NS_ASSUME_NONNULL_END

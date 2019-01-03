@@ -74,6 +74,9 @@ const NSInteger img_MaxNum = 9 ;
     
     self.backgroundColor = [UIColor clearColor];
     self.clipsToBounds = YES ;
+    
+    self.thumbnail = @"-thumbScale";
+    
 }
 
 
@@ -163,7 +166,9 @@ const NSInteger img_MaxNum = 9 ;
         
         
         NSString  *urlStr = picPathStringsArray.firstObject;
-        
+        if (self.isUseThumbnail) {
+            urlStr = [NSString stringWithFormat:@"%@%@",picPathStringsArray.firstObject,self.thumbnail];
+        }
         if ([self isNullWithObj:urlStr]) {
             
             if (callBlock) {
@@ -208,6 +213,9 @@ const NSInteger img_MaxNum = 9 ;
             
             //            开始加载图片
             
+            if (DEBUG) {
+                NSLog(@"加载图片---%@",urlStr);
+            }
             [imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                 
                 
@@ -294,7 +302,12 @@ const NSInteger img_MaxNum = 9 ;
             imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
             [imageView removeAllSubviews];
             if (idx<_picPathStringsArray.count) {
-                obj = _picPathStringsArray [idx];
+                if (self.isUseThumbnail) {
+                    obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
+                }else{
+                    obj = _picPathStringsArray [idx];
+                }
+                
                 
                 if (idx==8) {
                     [imageView removeAllSubviews];
@@ -319,6 +332,10 @@ const NSInteger img_MaxNum = 9 ;
                 }
                 if (obj) {
                     if (self.isLoadImg) {
+                        if (DEBUG) {
+                            NSLog(@"加载图片---%@",obj);
+                        }
+                        
                         [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
                     }
                     
@@ -347,7 +364,12 @@ const NSInteger img_MaxNum = 9 ;
             imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
             [imageView removeAllSubviews];
             if (idx<_picPathStringsArray.count) {
-                obj = _picPathStringsArray [idx];
+                if (self.isUseThumbnail) {
+                    obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
+                }else{
+                    obj = _picPathStringsArray [idx];
+                }
+                
                 
             }else{
                 if (self.shouQiImg) {
@@ -360,6 +382,10 @@ const NSInteger img_MaxNum = 9 ;
             
             if (obj) {
                 if (self.isLoadImg) {
+                    
+                    if (DEBUG) {
+                        NSLog(@"加载图片---%@",obj);
+                    }
                     [imageView sd_setImageWithURL:[NSURL URLWithString:obj] placeholderImage:nil];
                 }
                 

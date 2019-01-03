@@ -15,5 +15,12 @@
 @end
 @implementation DYPhotoContainerView
 
-
+- (void)setup
+{
+    
+    [super setup];
+    
+    self.thumbnail = @"-thumbScale";
+    
+}
 @end
