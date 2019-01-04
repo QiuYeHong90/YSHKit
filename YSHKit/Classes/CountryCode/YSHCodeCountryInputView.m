@@ -13,7 +13,7 @@
 #import <Masonry/Masonry.h>
 #import "YSHCodeCountryInputView.h"
 
-@interface YSHCodeCountryInputView ()
+@interface YSHCodeCountryInputView ()<UITextFieldDelegate>
 
 
 
@@ -156,7 +156,7 @@
         tempLab.textColor = [UIColor colorWithHexString:@"333333"];
         tempLab.clearButtonMode =  UITextFieldViewModeWhileEditing ;
         tempLab.keyboardType = UIKeyboardTypeNumberPad;
-        
+        tempLab.delegate = self ;
         _ysh_phoneTextField = tempLab ;
         [tempLab addTarget:self action:@selector(codeChange:) forControlEvents:UIControlEventEditingChanged];
         [self.bottomView addSubview:_ysh_phoneTextField];
@@ -293,6 +293,8 @@
 
 //-----------------点击事件
 - (void)codeChange:(UITextField *)sender {
+//    11
+    
     
     if (sender == self.ysh_codeTextField) {
         NSString * text = sender.text;
@@ -317,6 +319,20 @@
     
     
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    
+    
+    if (textField == self.ysh_phoneTextField) {
+        
+        
+      return   !(range.location >= 11);
+    }
+    
+    return YES;
+}
+
 -(YSHCountryCodeModel * )getDefaultCountry:(NSString *)code
 {
     NSPredicate * pred= [NSPredicate predicateWithFormat:@"dial_code = %@",code];
