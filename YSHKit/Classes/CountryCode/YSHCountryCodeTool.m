@@ -151,6 +151,9 @@ static YSHCountryCodeTool *manager = nil;
 
 + (NSString*)latinize:(NSString*)str
 {
+    if (str==nil) {
+        return @"";
+    }
     NSMutableString *source = [str mutableCopy];
     
     CFStringTransform((__bridge CFMutableStringRef)source, NULL, kCFStringTransformToLatin, NO);

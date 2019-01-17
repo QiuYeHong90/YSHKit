@@ -186,6 +186,11 @@
             break;
             
         default:
+        {
+            self.layer.borderWidth = 0;
+            
+            self.borderStyle = UITextBorderStyleNone;
+        }
             break;
     }
     
