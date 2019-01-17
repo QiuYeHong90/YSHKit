@@ -82,30 +82,30 @@ const NSInteger img_MaxNum = 9 ;
 
 -(void)setMaxNum:(NSInteger)maxNum
 {
-   
+    
     if (maxNum<=0) {
         maxNum = 9 ;
     }
-
+    
     _maxNum = maxNum ;
-//
-//    [self removeAllSubviews];
-//    NSMutableArray *temp = [NSMutableArray new];
-//
-//    for (int i = 0; i < _maxNum+1; i++) {
-//        UIImageView *imageView = [UIImageView new];
-//        [self addSubview:imageView];
-//        imageView.userInteractionEnabled = YES;
-//        imageView.clipsToBounds = YES;
-//        imageView.tag = i;
-//        imageView.backgroundColor = kCViewBgColor;
-//        imageView.contentMode = UIViewContentModeScaleAspectFill;
-//        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
-//        [imageView addGestureRecognizer:tap];
-//        [temp addObject:imageView];
-//    }
-//
-//    self.imageViewsArray = [temp copy];
+    //
+    //    [self removeAllSubviews];
+    //    NSMutableArray *temp = [NSMutableArray new];
+    //
+    //    for (int i = 0; i < _maxNum+1; i++) {
+    //        UIImageView *imageView = [UIImageView new];
+    //        [self addSubview:imageView];
+    //        imageView.userInteractionEnabled = YES;
+    //        imageView.clipsToBounds = YES;
+    //        imageView.tag = i;
+    //        imageView.backgroundColor = kCViewBgColor;
+    //        imageView.contentMode = UIViewContentModeScaleAspectFill;
+    //        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
+    //        [imageView addGestureRecognizer:tap];
+    //        [temp addObject:imageView];
+    //    }
+    //
+    //    self.imageViewsArray = [temp copy];
 }
 
 
@@ -114,7 +114,12 @@ const NSInteger img_MaxNum = 9 ;
 -(void)picPathStringsArray:(NSArray *)picPathStringsArray  callBlock:(void(^)(CGFloat h,BOOL isReload))callBlock
 {
     
-    
+    if (picPathStringsArray.count==1) {
+        if ([picPathStringsArray.firstObject isEqualToString:@""]) {
+            callBlock(0,NO);
+            return ;
+        }
+    }
     
     self.picPathStringsArray = picPathStringsArray;
     if (self.picPathStringsArray.count+1>self.imageViewsArray.count) {
@@ -142,9 +147,9 @@ const NSInteger img_MaxNum = 9 ;
             
         }
     }
-   
     
-   
+    
+    
     
     //    没有图片
     
@@ -213,9 +218,9 @@ const NSInteger img_MaxNum = 9 ;
             
             //            开始加载图片
 #if DEBUG
-           NSLog(@"加载图片---%@",urlStr);
+            NSLog(@"加载图片---%@",urlStr);
 #endif
-           
+            
             [imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                 
                 
@@ -332,7 +337,7 @@ const NSInteger img_MaxNum = 9 ;
                 }
                 if (obj) {
                     if (self.isLoadImg) {
-                       
+                        
 #if DEBUG
                         NSLog(@"加载图片---%@",obj);
 #endif
