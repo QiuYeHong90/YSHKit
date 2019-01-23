@@ -109,6 +109,25 @@ const NSInteger img_MaxNum = 9 ;
 }
 
 
+/**
+ 根据链接获取图片宽高 有规则图片 返回为0 则是无规则图片
+ */
+-(CGSize)ysh_getImgRateWH:(NSString *)imgUrl
+{
+    NSArray * tempArr = [imgUrl componentsSeparatedByString:@"/"];
+    if (tempArr&&tempArr.count>0) {
+        NSArray * w_hArray = [tempArr.lastObject componentsSeparatedByString:@"_"];
+        if (w_hArray&&w_hArray.count==2) {
+            CGFloat w  = [w_hArray.firstObject floatValue];
+            CGFloat h  = [w_hArray.lastObject floatValue];
+            if (h>0) {
+                return CGSizeMake(w, h);
+            }
+        }
+    }
+    
+    return CGSizeZero;
+}
 
 
 -(void)picPathStringsArray:(NSArray *)picPathStringsArray  callBlock:(void(^)(CGFloat h,BOOL isReload))callBlock
@@ -153,7 +172,7 @@ const NSInteger img_MaxNum = 9 ;
     
     //    没有图片
     
-    if (_picPathStringsArray.count == 0) {
+    if (_picPathStringsArray.count == 0||(_picPathStringsArray.count == 1&&[self isNullWithObj:_picPathStringsArray.firstObject])) {
         
         
         if (callBlock) {
@@ -171,9 +190,7 @@ const NSInteger img_MaxNum = 9 ;
         
         
         NSString  *urlStr = picPathStringsArray.firstObject;
-        if (self.isUseThumbnail) {
-            urlStr = [NSString stringWithFormat:@"%@%@",picPathStringsArray.firstObject,self.thumbnail];
-        }
+        
         if ([self isNullWithObj:urlStr]) {
             
             if (callBlock) {
@@ -183,6 +200,12 @@ const NSInteger img_MaxNum = 9 ;
             return;
         }
         
+        CGSize urlStrSize = [self ysh_getImgRateWH:urlStr] ;
+        
+        
+        if (self.isUseThumbnail) {
+            urlStr = [NSString stringWithFormat:@"%@%@",picPathStringsArray.firstObject,self.thumbnail];
+        }
         UIImageView *imageView = [_imageViewsArray firstObject];
         
         if (self.playImgView.superview == nil) {
@@ -203,13 +226,28 @@ const NSInteger img_MaxNum = 9 ;
         UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromCacheForKey:urlStr];
         
         if (!cachedImage) {
-            //            默认宽高
-            CGFloat h = itemW*9.f/16;
-            imageView.frame = CGRectMake(0, 0, itemW, h);
-            if (callBlock) {
+            
+            if (urlStrSize.width!=0&&urlStrSize.height!=0) {
                 
-                callBlock(h,NO);
+                //            默认宽高
+                CGSize imgSize = [self oneImg:urlStrSize.height imgW:urlStrSize.width itemMaxW:itemW];
+                imageView.frame = CGRectMake(0, 0, imgSize.width, imgSize.height);
+                if (callBlock) {
+                    
+                    callBlock(imgSize.height,NO);
+                }
+                [imageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+                return ;
+            }else{
+                //            默认宽高
+                CGFloat h = itemW*9.f/16;
+                imageView.frame = CGRectMake(0, 0, itemW, h);
+                if (callBlock) {
+                    
+                    callBlock(h,NO);
+                }
             }
+            
             
             
             
