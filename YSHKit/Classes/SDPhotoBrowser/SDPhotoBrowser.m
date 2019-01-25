@@ -12,7 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "SDBrowserImageView.h"
 
- 
+
 //  ============在这里方便配置样式相关设置===========
 
 //                      ||
@@ -25,7 +25,7 @@
 
 //  =============================================
 
-@implementation SDPhotoBrowser 
+@implementation SDPhotoBrowser
 {
     UIScrollView *_scrollView;
     BOOL _hasShowedFistView;
@@ -78,15 +78,15 @@
     [self addSubview:indexLabel];
     
     // 2.保存按钮
-//    UIButton *saveButton = [[UIButton alloc] init];
-//    [saveButton setTitle:NSLocalizedString(@"保存", nil) forState:UIControlStateNormal];
-//    [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    saveButton.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.90f];
-//    saveButton.layer.cornerRadius = 5;
-//    saveButton.clipsToBounds = YES;
-//    [saveButton addTarget:self action:@selector(saveImage) forControlEvents:UIControlEventTouchUpInside];
-//    _saveButton = saveButton;
-//    [self addSubview:saveButton];
+    //    UIButton *saveButton = [[UIButton alloc] init];
+    //    [saveButton setTitle:NSLocalizedString(@"保存", nil) forState:UIControlStateNormal];
+    //    [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //    saveButton.backgroundColor = [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.90f];
+    //    saveButton.layer.cornerRadius = 5;
+    //    saveButton.clipsToBounds = YES;
+    //    [saveButton addTarget:self action:@selector(saveImage) forControlEvents:UIControlEventTouchUpInside];
+    //    _saveButton = saveButton;
+    //    [self addSubview:saveButton];
 }
 
 - (void)saveImage
@@ -139,7 +139,7 @@
     for (int i = 0; i < self.imageCount; i++) {
         SDBrowserImageView *imageView = [[SDBrowserImageView alloc] init];
         imageView.tag = i;
-
+        
         // 单击图片
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoClick:)];
         
@@ -175,6 +175,36 @@
     
 }
 
+
+-(UIImageView *)ysh_sourceImgView:(UICollectionViewCell *)cell
+{
+    if (cell==nil) {
+        return cell ;
+    }
+    UIImageView * countImgView ;
+    for (UIView * itemView in cell.contentView.subviews) {
+        if ([itemView isKindOfClass:[UIImageView class]]) {
+            if (itemView.hidden==NO) {
+                if (countImgView==nil) {
+                    countImgView = itemView ;
+                }else{
+                    if (CGRectGetWidth(countImgView.frame)<CGRectGetWidth(itemView.frame)) {
+                        countImgView = itemView ;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    if (countImgView==nil) {
+        countImgView = cell ;
+        
+    }
+    return countImgView ;
+}
+
+
 - (void)photoClick:(UITapGestureRecognizer *)recognizer
 {
     _scrollView.hidden = YES;
@@ -183,42 +213,42 @@
     SDBrowserImageView *currentImageView = (SDBrowserImageView *)recognizer.view;
     NSInteger currentIndex = currentImageView.tag;
     UIView *sourceView ;
-    
+    UICollectionViewCell * cell;
     BOOL falg = NO ;
     if ([self.sourceImagesContainerView isKindOfClass:[UICollectionView class]]) {
-        
+        falg = YES;
         UICollectionView * collView =(UICollectionView *) self.sourceImagesContainerView ;
+        NSIndexPath * path = [NSIndexPath indexPathForRow:currentIndex inSection:0];
+        cell = [collView cellForItemAtIndexPath:path];
+        sourceView = [self ysh_sourceImgView:cell];
         
-        if (collView.scrollEnabled) {
-            NSIndexPath * path = [NSIndexPath indexPathForRow:currentIndex inSection:0];
-            if ([collView.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]] ) {
-                
-                
-                
-                sourceView = [collView cellForItemAtIndexPath:path];
-                
-                falg = YES;
-            }else{
-                
-                [self removeFromSuperview];
-                [[UIApplication sharedApplication] setStatusBarHidden:NO];
-                return ;
-            }
-           
-           
+        if (!sourceView) {
+            [self removeFromSuperview];
+            [[UIApplication sharedApplication] setStatusBarHidden:NO];
+            return ;
         }
         
         
         
     }
+    CGRect targetTemp = CGRectZero ;
     if (falg) {
+        
+        if (sourceView!=cell) {
+            CGRect tempRect = [cell convertRect:sourceView.frame toView:self.sourceImagesContainerView];
+            targetTemp = [self.sourceImagesContainerView convertRect:tempRect toView:self];
+        }else{
+            targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
+        }
+        
+        
         
     }else{
         sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+        targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     }
     
     
-    CGRect targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
     UIImageView *tempView = [[UIImageView alloc] init];
     tempView.contentMode = sourceView.contentMode;
@@ -234,7 +264,7 @@
     tempView.center = self.center;
     
     [self addSubview:tempView];
-
+    
     _saveButton.hidden = YES;
     
     [UIView animateWithDuration:SDPhotoBrowserHideImageAnimationDuration animations:^{
@@ -261,7 +291,7 @@
     }
     
     SDBrowserImageView *view = (SDBrowserImageView *)recognizer.view;
-
+    
     [view doubleTapToZommWithScale:scale];
 }
 
@@ -319,20 +349,43 @@
     }
 }
 
+
+
+
+
 - (void)showFirstImage
 {
     UIView *sourceView ;
+    UICollectionViewCell * cell;
+    BOOL flag = NO ;
     if ([self.sourceImagesContainerView isKindOfClass:[UICollectionView class]]) {
+        flag = YES ;
         UICollectionView * collView = (UICollectionView *)self.sourceImagesContainerView ;
+        [collView reloadData];
+        [collView layoutIfNeeded];
         NSIndexPath * path = [NSIndexPath indexPathForRow:self.currentImageIndex inSection:0];
-        sourceView = [collView cellForItemAtIndexPath:path];
-        
+        cell = [collView cellForItemAtIndexPath:path];
+        if (cell == nil) {
+            [collView layoutIfNeeded];
+            cell = [collView cellForItemAtIndexPath:path];
+        }
+        sourceView = [self ysh_sourceImgView:cell];
     }else{
         sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
     }
+    CGRect rect = CGRectZero ;
     
-    
-    CGRect rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
+    if (flag) {
+        if (cell!=nil&&cell != sourceView) {
+            CGRect temRect = [cell convertRect:sourceView.frame toView:self.sourceImagesContainerView];
+            rect = [self.sourceImagesContainerView convertRect:temRect toView:self];
+        }else{
+            rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
+        }
+        
+    }else{
+        rect = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
+    }
     
     UIImageView *tempView = [[UIImageView alloc] init];
     tempView.image = [self placeholderImageForIndex:self.currentImageIndex];
@@ -399,9 +452,9 @@
     [self setupImageOfImageViewForIndex:index];
     
     
-//    setupImageOfImageViewForIndex
+    //    setupImageOfImageViewForIndex
     if ([self.sourceImagesContainerView isKindOfClass:[UICollectionView class]]) {
-         UICollectionView * collView =(UICollectionView *) self.sourceImagesContainerView ;
+        UICollectionView * collView =(UICollectionView *) self.sourceImagesContainerView ;
         
         if (collView.scrollEnabled) {
             NSIndexPath * path = [NSIndexPath indexPathForRow:index inSection:0];
