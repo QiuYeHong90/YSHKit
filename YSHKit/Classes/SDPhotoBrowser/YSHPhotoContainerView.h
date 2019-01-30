@@ -58,7 +58,10 @@ NS_ASSUME_NONNULL_BEGIN
  是否使用图片后面拼接获取缩略图 默认不使用
  */
 @property (nonatomic,assign) BOOL isUseThumbnail;
-
+/**
+ 指定图片地址才有缩略图
+ */
+@property (nonatomic,assign) NSString * qiNiuBaseImgUrl;
 @property (nonatomic,assign) BOOL isLoadImg;
 /**
  点击跳转视频播放

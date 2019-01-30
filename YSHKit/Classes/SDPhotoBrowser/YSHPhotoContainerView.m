@@ -76,7 +76,7 @@ const NSInteger img_MaxNum = 9 ;
     self.clipsToBounds = YES ;
     
     self.thumbnail = @"-thumbScale";
-    
+    self.qiNiuBaseImgUrl = @"http://vn.cqdunyue.com";
 }
 
 
@@ -204,7 +204,11 @@ const NSInteger img_MaxNum = 9 ;
         
         
         if (self.isUseThumbnail) {
-            urlStr = [NSString stringWithFormat:@"%@%@",picPathStringsArray.firstObject,self.thumbnail];
+           
+            if ([picPathStringsArray.firstObject hasPrefix:self.qiNiuBaseImgUrl]) {
+                urlStr = [NSString stringWithFormat:@"%@%@",picPathStringsArray.firstObject,self.thumbnail];
+            }
+            
         }
         UIImageView *imageView = [_imageViewsArray firstObject];
         
@@ -345,10 +349,12 @@ const NSInteger img_MaxNum = 9 ;
             imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
             [imageView removeAllSubviews];
             if (idx<_picPathStringsArray.count) {
+                obj = _picPathStringsArray [idx];
                 if (self.isUseThumbnail) {
-                    obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
-                }else{
-                    obj = _picPathStringsArray [idx];
+                    if ([_picPathStringsArray [idx] hasPrefix:self.qiNiuBaseImgUrl]) {
+                        obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
+                    }
+                    
                 }
                 
                 
@@ -407,10 +413,12 @@ const NSInteger img_MaxNum = 9 ;
             imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
             [imageView removeAllSubviews];
             if (idx<_picPathStringsArray.count) {
+                obj = _picPathStringsArray [idx];
                 if (self.isUseThumbnail) {
-                    obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
-                }else{
-                    obj = _picPathStringsArray [idx];
+                    if ([_picPathStringsArray [idx] hasPrefix:self.qiNiuBaseImgUrl]) {
+                        obj = [NSString stringWithFormat:@"%@%@",_picPathStringsArray [idx],self.thumbnail];
+                    }
+                   
                 }
                 
                 

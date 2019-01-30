@@ -5,7 +5,8 @@
 //  Created by shuhui on 2018/12/13.
 //  Copyright © 2018 793983383@qq.com. All rights reserved.
 //
-
+#import "NSString+YSHAnimation.h"
+#import "YSHHudCustomView.h"
 #import "YSHHUDVC.h"
 
 @interface YSHHUDVC ()
@@ -24,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+   
     [self.dataArray setArray:@[
                                @{
                                    @"title":@"错误提示",
@@ -43,6 +46,10 @@
                                    },
                                @{
                                    @"title":@"蛋糕状读条器",
+                                   @"toVC":@"HUDVC",
+                                   },
+                               @{
+                                   @"title":@"加载动画",
                                    @"toVC":@"HUDVC",
                                    }
                                ]];
@@ -141,15 +148,31 @@
                 
             }
                 break;
-                
+//            case 5:
+//            {
+//
+//
+//                [SHProgressHUD showSingleWheelInView:self.view];
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                    [SHProgressHUD hideHUD];
+//                });
+//
+//            }
+//            break;
             default:
             {
                 
+                YSHHudCustomView * view = [[NSBundle mainBundle ]loadNibNamed:@"YSHHudCustomView" owner:self options:nil][0];
                 
-                [SHProgressHUD showSingleWheelInView:self.view];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [SHProgressHUD hideHUD];
-                });
+                MBProgressHUD * hud = [MBProgressHUD new];
+                hud.mode = MBProgressHUDModeCustomView ;
+                hud.bezelView.backgroundColor = UIColor.clearColor;
+                hud.customView = view ;
+                [hud showAnimated:YES];
+                [self.view addSubview:hud];
+//                YSHHudCustomView
+//                [SHProgressHUD ]
+                
                 
             }
                 break;

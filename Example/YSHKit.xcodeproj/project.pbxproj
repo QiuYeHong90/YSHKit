@@ -26,6 +26,10 @@
 		70796B4321C891C00086190B /* DYPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70796B4221C891C00086190B /* DYPhotoContainerView.m */; };
 		70796B4B21C8DF8B0086190B /* YSHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70796B4921C8DF8B0086190B /* YSHTableViewCell.m */; };
 		707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */; };
+		709031232201779F003E5801 /* YSHHudCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 709031222201779F003E5801 /* YSHHudCustomView.m */; };
+		70903125220177AA003E5801 /* YSHHudCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70903124220177AA003E5801 /* YSHHudCustomView.xib */; };
+		709031282201787F003E5801 /* NSString+YSHAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 709031272201787F003E5801 /* NSString+YSHAnimation.m */; };
+		7090312B220178A3003E5801 /* UIBezierPath+YSHTextPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7090312A220178A3003E5801 /* UIBezierPath+YSHTextPath.m */; };
 		70986C4321D1D768006F4513 /* YSHCodeCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70986C4221D1D768006F4513 /* YSHCodeCountryViewController.m */; };
 		709ABF8921C79F330078B4D7 /* SDPhotoBrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 709ABF8821C79F330078B4D7 /* SDPhotoBrowserVC.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
@@ -77,6 +81,13 @@
 		70796B4921C8DF8B0086190B /* YSHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHTableViewCell.m; sourceTree = "<group>"; };
 		707C5AE821C22AA7008C0DE9 /* YSHHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHHUDVC.h; sourceTree = "<group>"; };
 		707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHHUDVC.m; sourceTree = "<group>"; };
+		709031212201779F003E5801 /* YSHHudCustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHHudCustomView.h; sourceTree = "<group>"; };
+		709031222201779F003E5801 /* YSHHudCustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHHudCustomView.m; sourceTree = "<group>"; };
+		70903124220177AA003E5801 /* YSHHudCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YSHHudCustomView.xib; sourceTree = "<group>"; };
+		709031262201787F003E5801 /* NSString+YSHAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+YSHAnimation.h"; sourceTree = "<group>"; };
+		709031272201787F003E5801 /* NSString+YSHAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+YSHAnimation.m"; sourceTree = "<group>"; };
+		70903129220178A3003E5801 /* UIBezierPath+YSHTextPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+YSHTextPath.h"; sourceTree = "<group>"; };
+		7090312A220178A3003E5801 /* UIBezierPath+YSHTextPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+YSHTextPath.m"; sourceTree = "<group>"; };
 		70986C4121D1D768006F4513 /* YSHCodeCountryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHCodeCountryViewController.h; sourceTree = "<group>"; };
 		70986C4221D1D768006F4513 /* YSHCodeCountryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHCodeCountryViewController.m; sourceTree = "<group>"; };
 		709ABF8721C79F330078B4D7 /* SDPhotoBrowserVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserVC.h; sourceTree = "<group>"; };
@@ -251,6 +262,13 @@
 		70986C4421D1D818006F4513 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				709031212201779F003E5801 /* YSHHudCustomView.h */,
+				709031222201779F003E5801 /* YSHHudCustomView.m */,
+				70903124220177AA003E5801 /* YSHHudCustomView.xib */,
+				709031262201787F003E5801 /* NSString+YSHAnimation.h */,
+				709031272201787F003E5801 /* NSString+YSHAnimation.m */,
+				70903129220178A3003E5801 /* UIBezierPath+YSHTextPath.h */,
+				7090312A220178A3003E5801 /* UIBezierPath+YSHTextPath.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -342,6 +360,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				70903125220177AA003E5801 /* YSHHudCustomView.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,8 +460,11 @@
 				70796B4B21C8DF8B0086190B /* YSHTableViewCell.m in Sources */,
 				70986C4321D1D768006F4513 /* YSHCodeCountryViewController.m in Sources */,
 				700B29AE21C773BF00A9947F /* YDTextField.m in Sources */,
+				709031282201787F003E5801 /* NSString+YSHAnimation.m in Sources */,
+				709031232201779F003E5801 /* YSHHudCustomView.m in Sources */,
 				700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				7090312B220178A3003E5801 /* UIBezierPath+YSHTextPath.m in Sources */,
 				707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */,
 				70796B4321C891C00086190B /* DYPhotoContainerView.m in Sources */,
 				709ABF8921C79F330078B4D7 /* SDPhotoBrowserVC.m in Sources */,
