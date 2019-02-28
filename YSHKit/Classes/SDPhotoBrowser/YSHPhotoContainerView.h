@@ -72,6 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)setup;
+
+-(CGSize)oneImg:(CGFloat)imgH imgW:(CGFloat)imgW itemMaxW:(CGFloat)itemMaxW;
 @end
 
 NS_ASSUME_NONNULL_END
