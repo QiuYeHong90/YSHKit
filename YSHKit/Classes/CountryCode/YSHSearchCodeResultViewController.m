@@ -97,11 +97,9 @@
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     
     searchController.searchResultsController.view.hidden = NO;
-    NSString *property = @"name";
-    
     
     //谓词搜索
-    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"%K CONTAINS %@",property, searchController.searchBar.text];
+    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"name CONTAINS %@ or dial_code CONTAINS %@",searchController.searchBar.text,searchController.searchBar.text];
     if (self.searchList!= nil) {
         [self.searchList removeAllObjects];
     }
