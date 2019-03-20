@@ -20,6 +20,13 @@
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
         [[SDImageCache sharedImageCache] clearMemory];
     }];
+    
+    
+    [self.codeView setPhoneCode:@"86"];
+    
+    self.codeView.CallBlock = ^{
+        
+    };
 }
 
 /*

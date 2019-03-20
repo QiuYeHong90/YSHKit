@@ -33,7 +33,7 @@
 - (UIColor *)lineColor
 {
     if (!_lineColor) {
-        _lineColor = [UIColor colorWithHexString:@"e6e6e6"];
+        _lineColor = [UIColor clearColor];
     }
     return _lineColor ;
 }
@@ -86,6 +86,18 @@
     return _ysh_rightView ;
 }
 
+- (UIImageView *)ysh_phoneImgView
+{
+    if (!_ysh_phoneImgView) {
+        _ysh_phoneImgView = [UIImageView new];
+        
+        _ysh_phoneImgView.image = [NSBundle ysh_imageName:@"denglu_shouji"];
+        [self.bottomView addSubview:_ysh_phoneImgView];
+    }
+    return _ysh_phoneImgView ;
+}
+
+
 -(UIView *)topView
 {
     if (!_topView) {
@@ -101,10 +113,20 @@
             new.title = weakSelf.ysh_titleLab.text ;
             new.CallBlock = ^(YSHCountryCodeModel *model) {
                 weakSelf.ysh_areaLab.text = model.name;
-                weakSelf.ysh_codeTextField.text = [NSString stringWithFormat:@"%@",model.dial_code];
+                weakSelf.ysh_codeLab.text = [NSString stringWithFormat:@"%@",model.dial_code];
             };
             [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:new animated:YES completion:nil];
         }]];
+        
+        UIView * line = [UIView new];
+        line.backgroundColor = [UIColor colorWithHexString:@"d9d9d9"];
+        [_topView addSubview:line];
+        
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(@0);
+            make.height.equalTo(@.5);
+        }];
+        
         [self addSubview:_topView];
     }
     return _topView;
@@ -119,14 +141,13 @@
         _bottomView.layer.cornerRadius = 5 ;
         [self addSubview:_bottomView];
         
-        UILabel * tempLab = [UILabel new];
-        tempLab.font = [UIFont systemFontOfSize:15];
-        tempLab.textColor = [UIColor colorWithHexString:@"333333"];
-        tempLab.text = @"+";
-        [_bottomView addSubview:tempLab];
-        [tempLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@10);
-            make.centerY.equalTo(_bottomView);
+        UIView * line = [UIView new];
+        line.backgroundColor = [UIColor colorWithHexString:@"d9d9d9"];
+        [_bottomView addSubview:line];
+        
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.bottom.equalTo(@0);
+            make.height.equalTo(@.5);
         }];
         
         
@@ -134,19 +155,17 @@
     return _bottomView;
 }
 
--(UITextField *)ysh_codeTextField
+-(UILabel *)ysh_codeLab
 {
-    if (!_ysh_codeTextField) {
-        UITextField * tempLab = [UITextField new];
+    if (!_ysh_codeLab) {
+        UILabel * tempLab = [UILabel new];
         tempLab.font = [UIFont systemFontOfSize:15];
         tempLab.textColor = [UIColor colorWithHexString:@"333333"];
-        tempLab.keyboardType = UIKeyboardTypeNumberPad;
-        
-        _ysh_codeTextField = tempLab ;
-        [tempLab addTarget:self action:@selector(codeChange:) forControlEvents:UIControlEventEditingChanged];
-        [self.bottomView addSubview:_ysh_codeTextField];
+        tempLab.textAlignment = NSTextAlignmentRight;
+        _ysh_codeLab = tempLab ;
+        [self.topView addSubview:_ysh_codeLab];
     }
-    return _ysh_codeTextField;
+    return _ysh_codeLab;
 }
 -(UITextField *)ysh_phoneTextField
 {
@@ -164,15 +183,6 @@
     return _ysh_phoneTextField;
 }
 
--(UIView *)bottom_lineView
-{
-    if (!_bottom_lineView) {
-        _bottom_lineView = [UIView new];
-        _bottom_lineView.backgroundColor = [UIColor colorWithHexString:@"f7f7f7"];
-        [self.bottomView addSubview:_bottom_lineView];
-    }
-    return _bottom_lineView;
-}
 
 - (instancetype)init
 {
@@ -199,6 +209,7 @@
 {
     __weak typeof(self) weakSelf = self;
     
+    
     self.backgroundColor = [UIColor whiteColor];
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.equalTo(@0);
@@ -213,17 +224,16 @@
     
     
     [self.ysh_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@10);
+        make.left.equalTo(@2);
         make.centerY.equalTo(weakSelf.topView);
         make.width.equalTo(@70);
     }];
     
-    [self.ysh_areaLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(weakSelf.ysh_titleLab.mas_right).offset(15);
-        make.centerY.equalTo(weakSelf.topView);
-        
-        
-    }];
+
+    
+    
+    
+    
     self.ysh_rightView.backgroundColor = UIColor.whiteColor;
     if (self.rightRowImg) {
         self.ysh_rightView.image = self.rightRowImg;
@@ -231,47 +241,68 @@
     [self.ysh_rightView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@(self.ysh_rightView.image.size.width));
         make.height.equalTo(@(self.ysh_rightView.image.size.height));
-        make.left.equalTo(weakSelf.ysh_areaLab.mas_right).offset(15);
         make.right.equalTo(@-15);
         make.centerY.equalTo(weakSelf.topView);
         
     }];
+    
+    
+    
     //    bottomView 子控件
-    
-    [self.ysh_codeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@25);
-        make.width.equalTo(@60);
-        //        make.height.equalTo(@30);
-        make.centerY.equalTo(weakSelf.bottomView);
+    [self.ysh_codeLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(@-25);
+        make.centerY.equalTo(weakSelf.topView);
     }];
+    {
+        UILabel * tempLab = [UILabel new];
+        tempLab.font = [UIFont systemFontOfSize:15];
+        tempLab.textColor = [UIColor colorWithHexString:@"333333"];
+        tempLab.text = @"+";
+        [_topView addSubview:tempLab];
+        __weak typeof(self) weakSelf = self;
+        [tempLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(weakSelf.ysh_codeLab.mas_left).offset(-5);
+            make.centerY.equalTo(weakSelf.topView);
+        }];
+        
+        
+    }
     
-    [self.bottom_lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(weakSelf.ysh_codeTextField.mas_right).offset(5);
-        make.top.bottom.equalTo(@0);
-        make.width.equalTo(@1);
-    }];
+    
+    
+    
     
     
     [self.ysh_phoneTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(weakSelf.bottom_lineView.mas_right).offset(5);
+        make.left.equalTo(@25);
         make.right.equalTo(@-5);
         make.centerY.equalTo(weakSelf.bottomView);
         
     }];
     
+    [self.ysh_phoneImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@2);
+        make.centerY.equalTo(weakSelf.bottomView);
+    }];
+    
+    
     //    颜色
     {
         _topView.layer.borderColor = self.lineColor.CGColor;
         self.bottomView.layer.borderColor = self.lineColor.CGColor;
-        self.bottom_lineView.backgroundColor = self.lineColor ;
+        
     }
+    
+    
+    self.ysh_areaLab.hidden = YES ;
+    
 }
 
 -(void)initUI
 {
     
     YSHCountryCodeModel * model = [YSHCountryCodeTool shareCountryCodeTool].curretnCountryModel;
-    self.ysh_codeTextField.text =  [NSString stringWithFormat:@"%@",model.dial_code];
+    self.ysh_codeLab.text =  [NSString stringWithFormat:@"%@",model.dial_code];
     self.ysh_areaLab.text = model.name;
     [self UIConfig];
     
@@ -281,7 +312,7 @@
 
 -(void)UIConfig
 {
-    self.ysh_titleLab.text =  NSLocalizedString(@"国家/地区", nil);
+    self.ysh_titleLab.text =  NSLocalizedString(@"login_txt_telephone_code", @"国家/地区");
     self.ysh_phoneTextField.placeholder = NSLocalizedString(@"输入联系方式", nil);
     self.searchPlaceholder = NSLocalizedString(@"搜索", nil);
 }
@@ -296,7 +327,7 @@
 //    11
     
     
-    if (sender == self.ysh_codeTextField) {
+    if (sender == self.ysh_codeLab) {
         NSString * text = sender.text;
         
         YSHCountryCodeModel * model  = [self getDefaultCountry:text];
@@ -319,6 +350,24 @@
     
     
 }
+
+
+-(void)setPhoneCode:(NSString *)code
+{
+    NSString * text = code;
+    
+    YSHCountryCodeModel * model  = [self getDefaultCountry:text];
+    if (model) {
+        self.ysh_areaLab.text = model.name;
+    }else{
+        self.ysh_areaLab.text = NSLocalizedString(@"", nil);
+    }
+    self.ysh_codeLab.text = code ;
+    if (self.CallBlock) {
+        self.CallBlock();
+    }
+}
+
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -351,7 +400,7 @@
 
 -(NSString *)getFillPhone
 {
-    return [NSString stringWithFormat:@"+%@-%@",self.ysh_codeTextField.text,self.ysh_phoneTextField.text];
+    return [NSString stringWithFormat:@"+%@-%@",self.ysh_codeLab.text,self.ysh_phoneTextField.text];
 }
 -(void)setFillPhoe:(NSString *)phone
 {
@@ -359,11 +408,11 @@
     YSHCountryCodeModel * deftModel  = [self fullPhoneNumberChange:phone];
     if (deftModel) {
         self.ysh_areaLab.text = deftModel.name;
-        self.ysh_codeTextField.text = [NSString stringWithFormat:@"%@",deftModel.code];
+        self.ysh_codeLab.text = [NSString stringWithFormat:@"%@",deftModel.code];
         self.ysh_phoneTextField.text = [NSString stringWithFormat:@"%@",deftModel.phone];
     }else{
         self.ysh_areaLab.text = NSLocalizedString(@"", nil);
-        self.ysh_codeTextField.text = nil;
+        self.ysh_codeLab.text = nil;
         self.ysh_phoneTextField.text = nil;
     }
     
@@ -401,7 +450,7 @@
 
 -(BOOL)isConfirm
 {
-    return self.ysh_codeTextField.text.length>0&&self.ysh_phoneTextField.text.length>0&&self.ysh_phoneTextField.text.length<=11;
+    return self.ysh_codeLab.text.length>0&&self.ysh_phoneTextField.text.length>0&&self.ysh_phoneTextField.text.length<=11;
     
 }
 /*

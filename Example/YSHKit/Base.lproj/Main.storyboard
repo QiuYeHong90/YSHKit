@@ -264,6 +264,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TLq-xK-n1q"/>
+                    <connections>
+                        <outlet property="codeView" destination="OmK-eF-qbv" id="mrC-c6-RoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIl-hT-9Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

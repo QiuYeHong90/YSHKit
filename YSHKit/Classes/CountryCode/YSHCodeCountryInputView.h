@@ -21,10 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  底部视图
  */
 @property (nonatomic,strong) UIView * bottomView;
-/**
- 横线
- */
-@property (nonatomic,strong) UIView * bottom_lineView;
+
 /**
  标题
  */
@@ -43,16 +40,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  code
  */
-@property (nonatomic,strong) UITextField * ysh_codeTextField;
+@property (nonatomic,strong) UILabel * ysh_codeLab;
 /**
  区域lab
  */
 @property (nonatomic,strong) UITextField * ysh_phoneTextField;
-
+/**
+ 区域lab
+ */
+@property (nonatomic,strong) UIImageView * ysh_phoneImgView;
 
 
 /**
- 线条颜色 默认e6e6e6
+ 线条颜色 默认clearColor
  */
 @property (nonatomic,strong) IBInspectable UIColor * lineColor;
 /**
@@ -88,7 +88,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)setFillPhoe:(NSString *)phone;
 
-
+/**
+ 设置区号
+ */
+-(void)setPhoneCode:(NSString *)code;
 
 @end
 
