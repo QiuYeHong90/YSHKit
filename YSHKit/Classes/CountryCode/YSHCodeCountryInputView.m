@@ -226,7 +226,7 @@
     [self.ysh_titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@2);
         make.centerY.equalTo(weakSelf.topView);
-        make.width.equalTo(@70);
+//        make.width.equalTo(@70);
     }];
     
 
