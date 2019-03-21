@@ -412,7 +412,7 @@
         self.ysh_phoneTextField.text = [NSString stringWithFormat:@"%@",deftModel.phone];
     }else{
         self.ysh_areaLab.text = NSLocalizedString(@"", nil);
-        self.ysh_codeLab.text = nil;
+//        self.ysh_codeLab.text = nil;
         self.ysh_phoneTextField.text = nil;
     }
     
