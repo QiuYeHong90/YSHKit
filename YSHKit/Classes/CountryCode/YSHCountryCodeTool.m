@@ -6,6 +6,13 @@
 //  Copyright © 2018 793983383@qq.com. All rights reserved.
 //
 
+#define kLanguage_Key @"languageKey"
+
+#define kEnglish_US @"en"
+#define kChinese_Simple @"zh-Hans"
+#define kVietnamese @"vi"
+
+#import <YYKit/YYKit.h>
 #import "YSHCountryCodeTool.h"
 
 @implementation YSHCountryCodeTool
@@ -21,6 +28,58 @@ static YSHCountryCodeTool *manager = nil;
     return manager;
 }
 
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
+
+-(void)initLoad:(NSDictionary *)codeRoot
+{
+    
+    
+    NSString *userLanguage ;
+    NSString *phoneLanguage = [[[NSUserDefaults standardUserDefaults]objectForKey:@"AppleLanguages"] firstObject];
+    
+    NSLog(@"phoneLanguage: %@", phoneLanguage);
+    
+    userLanguage = [[self class] isSuport:phoneLanguage];
+    if(!userLanguage){
+        //            如果不支持 使用英语
+        userLanguage = kEnglish_US;
+    }
+    
+    [self setNewLanguage:userLanguage];
+    NSString * key;
+    if ([userLanguage isEqualToString:kEnglish_US]) {
+//        英语 code_en
+        
+         key = @"code_en";
+    }else if ([userLanguage isEqualToString:kChinese_Simple]){
+//        中文 code_china
+         key = @"code_china";
+    }else{
+//        code_vietnam
+        key = @"code_vietnam";
+        
+    }
+    NSArray * tempArr = codeRoot[key];
+    
+    NSArray * codeArr = [NSArray modelArrayWithClass:YSHCountryCodeModel.class json:tempArr];
+    if (!self.countryCodeArray) {
+        self.countryCodeArray = codeArr ;
+    }
+    
+    
+  
+    
+}
+
+
 - (NSArray *)countryCodeArray
 {
     if (!_countryCodeArray) {
@@ -31,8 +90,21 @@ static YSHCountryCodeTool *manager = nil;
 
 -(YSHCountryCodeModel *)curretnCountryModel
 {
+    
     if (!_curretnCountryModel) {
-        [[self class] getCodeArray];
+        if (_countryCodeArray) {
+            NSLocale *locale = [NSLocale currentLocale];
+            NSString * currentCountryCode  =  [locale objectForKey:NSLocaleCountryCode];
+            for (YSHCountryCodeModel * model in _countryCodeArray) {
+                
+                if ([model.code isEqualToString:currentCountryCode]) {
+                    [YSHCountryCodeTool shareCountryCodeTool].curretnCountryModel = model;
+                }
+            }
+        }else{
+            [[self class] getCodeArray];
+        }
+        
     }
     
     return _curretnCountryModel;
@@ -107,6 +179,7 @@ static YSHCountryCodeTool *manager = nil;
                                   @"2908",@"TA",@"262",@"TF",@"383",@"XK",@"247",@"AC",
                                   @"246",@"DG",@"212",@"EH",@"3491",@"IC",@"34",@"EA",
                                   @"11",@"HM",@"1",@"UM",@"47",@"BV",@"11",@"CP",nil];
+    
     NSMutableArray * countriesArray = [[NSMutableArray alloc] init];
     
     //    NSString * localeIdentifier = [DYInternationalManager sharedInternationalManager].currentLanguage;
@@ -132,7 +205,7 @@ static YSHCountryCodeTool *manager = nil;
         YSHCountryCodeModel * model = [YSHCountryCodeModel new];
         model.code = countryCode;
         model.name = displayNameString;
-        model.latin = [self latinize:displayNameString];
+        model.latin = [self ysh_latinize:displayNameString];
         model.dial_code = rawDialCodeDict[countryCode];
         
         NSLog(@"---%@--%@--%@",displayNameString,countryCode,model.latin);
@@ -146,10 +219,16 @@ static YSHCountryCodeTool *manager = nil;
     
     
     
+    
+    NSString * jsonData  = [countriesArray modelToJSONObject];
+    NSLog(@"jsonData---\n%@ \njsonData---",jsonData);
+    
+    
+    
     return countriesArray;
 }
 
-+ (NSString*)latinize:(NSString*)str
++ (NSString*)ysh_latinize:(NSString*)str
 {
     if (str==nil) {
         return @"";
@@ -239,4 +318,107 @@ static YSHCountryCodeTool *manager = nil;
     
 }
 
+
+
+-(NSBundle *)languageBunle
+{
+    NSString * bundlePath = [[NSBundle mainBundle] pathForResource:self.currentLanguage ofType:@"lproj"];
+    
+    return [NSBundle bundleWithPath:bundlePath];
+    
+}
+
+
+-(NSArray *)langueArray
+{
+    
+    
+    return @[
+             @"en",@"vi",@"zh-Hans"
+             ];;
+}
+
++(NSString *)isSuport:(NSString *)string
+{
+    YSHCountryCodeTool * mangage = [YSHCountryCodeTool shareCountryCodeTool];
+    
+    for (NSString * j in mangage.langueArray) {
+        if([string hasPrefix:j]){
+            
+            return j;
+        }
+    }
+    
+    return mangage.langueArray.firstObject;
+}
+
+
+- (void)setNewLanguage:(NSString *)language
+{
+    NSString * setLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:kLanguage_Key];
+    if ([language isEqualToString:setLanguage]) {
+        return;
+    }
+    // 简体中文
+    else if ([language isEqualToString:kChinese_Simple]) {
+        [[NSUserDefaults standardUserDefaults] setObject:kChinese_Simple forKey:kLanguage_Key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    // 英文
+    else if ([language isEqualToString:kEnglish_US]) {
+        [[NSUserDefaults standardUserDefaults] setObject:kEnglish_US forKey:kLanguage_Key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    //    越南语
+    else if ([language isEqualToString:kVietnamese]) {
+        [[NSUserDefaults standardUserDefaults] setObject:kVietnamese forKey:kLanguage_Key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+  
+}
++(NSString *)interfaceLanguageString
+{
+    YSHCountryCodeTool * mangage = [YSHCountryCodeTool shareCountryCodeTool];
+    NSString * str   = mangage.langueDictionary[ mangage.currentLanguage];
+    if(str){
+        return str;
+    }
+    
+    return @"en";
+}
+-(NSDictionary *)langueDictionary
+{
+    return @{
+             //             简体中文
+             kChinese_Simple:@"zh",
+             //             英语
+             kEnglish_US:@"en",
+             //             越南
+             kVietnamese:@"vi",
+             
+             };
+}
+
+-(NSString *)currentLanguage
+{
+    NSString * setLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:kLanguage_Key];
+    //默认是简体中文
+    if (setLanguage == nil) {
+        setLanguage = kEnglish_US;
+    }
+    
+    return setLanguage;
+    
+}
+
+
+// 根据key获取value
+- (NSString *)getStringForKey:(NSString *)key
+{
+    NSBundle * bundle = [[YSHCountryCodeTool shareCountryCodeTool] languageBunle];
+    if (bundle) {
+        return NSLocalizedStringFromTableInBundle(key, @"Localizable", bundle, nil);
+    }
+    return NSLocalizedString(key, nil);
+}
 @end

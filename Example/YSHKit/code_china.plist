@@ -1,0 +1,2566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>code</key>
+		<string>AC</string>
+		<key>dial_code</key>
+		<string>247</string>
+		<key>latin</key>
+		<string>a sen song dao</string>
+		<key>name</key>
+		<string>阿森松岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AD</string>
+		<key>dial_code</key>
+		<string>376</string>
+		<key>latin</key>
+		<string>an dao er</string>
+		<key>name</key>
+		<string>安道尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AE</string>
+		<key>dial_code</key>
+		<string>971</string>
+		<key>latin</key>
+		<string>a la bo lian he qiu zhang guo</string>
+		<key>name</key>
+		<string>阿拉伯联合酋长国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AF</string>
+		<key>dial_code</key>
+		<string>93</string>
+		<key>latin</key>
+		<string>a fu han</string>
+		<key>name</key>
+		<string>阿富汗</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AG</string>
+		<key>dial_code</key>
+		<string>1268</string>
+		<key>latin</key>
+		<string>an ti gua he ba bu da</string>
+		<key>name</key>
+		<string>安提瓜和巴布达</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AI</string>
+		<key>dial_code</key>
+		<string>1264</string>
+		<key>latin</key>
+		<string>an gui la</string>
+		<key>name</key>
+		<string>安圭拉</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AL</string>
+		<key>dial_code</key>
+		<string>355</string>
+		<key>latin</key>
+		<string>a er ba ni ya</string>
+		<key>name</key>
+		<string>阿尔巴尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AM</string>
+		<key>dial_code</key>
+		<string>374</string>
+		<key>latin</key>
+		<string>ya mei ni ya</string>
+		<key>name</key>
+		<string>亚美尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AO</string>
+		<key>dial_code</key>
+		<string>244</string>
+		<key>latin</key>
+		<string>an ge la</string>
+		<key>name</key>
+		<string>安哥拉</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AQ</string>
+		<key>dial_code</key>
+		<string>672</string>
+		<key>latin</key>
+		<string>nan ji zhou</string>
+		<key>name</key>
+		<string>南极洲</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AR</string>
+		<key>dial_code</key>
+		<string>54</string>
+		<key>latin</key>
+		<string>a gen ting</string>
+		<key>name</key>
+		<string>阿根廷</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AS</string>
+		<key>dial_code</key>
+		<string>1684</string>
+		<key>latin</key>
+		<string>mei shu sa mo ya</string>
+		<key>name</key>
+		<string>美属萨摩亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AT</string>
+		<key>dial_code</key>
+		<string>43</string>
+		<key>latin</key>
+		<string>ao de li</string>
+		<key>name</key>
+		<string>奥地利</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AU</string>
+		<key>dial_code</key>
+		<string>61</string>
+		<key>latin</key>
+		<string>ao da li ya</string>
+		<key>name</key>
+		<string>澳大利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AW</string>
+		<key>dial_code</key>
+		<string>297</string>
+		<key>latin</key>
+		<string>a lu ba</string>
+		<key>name</key>
+		<string>阿鲁巴</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AX</string>
+		<key>dial_code</key>
+		<string>358</string>
+		<key>latin</key>
+		<string>ao lan qun dao</string>
+		<key>name</key>
+		<string>奥兰群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AZ</string>
+		<key>dial_code</key>
+		<string>994</string>
+		<key>latin</key>
+		<string>a sai bai jiang</string>
+		<key>name</key>
+		<string>阿塞拜疆</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BA</string>
+		<key>dial_code</key>
+		<string>387</string>
+		<key>latin</key>
+		<string>bo si ni ya he hei sai ge wei na</string>
+		<key>name</key>
+		<string>波斯尼亚和黑塞哥维那</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BB</string>
+		<key>dial_code</key>
+		<string>1246</string>
+		<key>latin</key>
+		<string>ba ba duo si</string>
+		<key>name</key>
+		<string>巴巴多斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BD</string>
+		<key>dial_code</key>
+		<string>880</string>
+		<key>latin</key>
+		<string>meng jia la guo</string>
+		<key>name</key>
+		<string>孟加拉国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BE</string>
+		<key>dial_code</key>
+		<string>32</string>
+		<key>latin</key>
+		<string>bi li shi</string>
+		<key>name</key>
+		<string>比利时</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BF</string>
+		<key>dial_code</key>
+		<string>226</string>
+		<key>latin</key>
+		<string>bu ji na fa suo</string>
+		<key>name</key>
+		<string>布基纳法索</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BG</string>
+		<key>dial_code</key>
+		<string>359</string>
+		<key>latin</key>
+		<string>bao jia li ya</string>
+		<key>name</key>
+		<string>保加利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BH</string>
+		<key>dial_code</key>
+		<string>973</string>
+		<key>latin</key>
+		<string>ba lin</string>
+		<key>name</key>
+		<string>巴林</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BI</string>
+		<key>dial_code</key>
+		<string>257</string>
+		<key>latin</key>
+		<string>bu long di</string>
+		<key>name</key>
+		<string>布隆迪</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BJ</string>
+		<key>dial_code</key>
+		<string>229</string>
+		<key>latin</key>
+		<string>bei ning</string>
+		<key>name</key>
+		<string>贝宁</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BL</string>
+		<key>dial_code</key>
+		<string>590</string>
+		<key>latin</key>
+		<string>sheng ba tai lei mi</string>
+		<key>name</key>
+		<string>圣巴泰勒米</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BM</string>
+		<key>dial_code</key>
+		<string>1441</string>
+		<key>latin</key>
+		<string>bai mu da</string>
+		<key>name</key>
+		<string>百慕大</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BN</string>
+		<key>dial_code</key>
+		<string>673</string>
+		<key>latin</key>
+		<string>wen lai</string>
+		<key>name</key>
+		<string>文莱</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BO</string>
+		<key>dial_code</key>
+		<string>591</string>
+		<key>latin</key>
+		<string>bo li wei ya</string>
+		<key>name</key>
+		<string>玻利维亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BQ</string>
+		<key>dial_code</key>
+		<string>599</string>
+		<key>latin</key>
+		<string>he shu jia lei bi qu</string>
+		<key>name</key>
+		<string>荷属加勒比区</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BR</string>
+		<key>dial_code</key>
+		<string>55</string>
+		<key>latin</key>
+		<string>ba xi</string>
+		<key>name</key>
+		<string>巴西</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BS</string>
+		<key>dial_code</key>
+		<string>1242</string>
+		<key>latin</key>
+		<string>ba ha ma</string>
+		<key>name</key>
+		<string>巴哈马</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BT</string>
+		<key>dial_code</key>
+		<string>975</string>
+		<key>latin</key>
+		<string>bu dan</string>
+		<key>name</key>
+		<string>不丹</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BV</string>
+		<key>dial_code</key>
+		<string>47</string>
+		<key>latin</key>
+		<string>bu wei dao</string>
+		<key>name</key>
+		<string>布韦岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BW</string>
+		<key>dial_code</key>
+		<string>267</string>
+		<key>latin</key>
+		<string>bo ci wa na</string>
+		<key>name</key>
+		<string>博茨瓦纳</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BY</string>
+		<key>dial_code</key>
+		<string>375</string>
+		<key>latin</key>
+		<string>bai e luo si</string>
+		<key>name</key>
+		<string>白俄罗斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>BZ</string>
+		<key>dial_code</key>
+		<string>501</string>
+		<key>latin</key>
+		<string>bo li zi</string>
+		<key>name</key>
+		<string>伯利兹</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CA</string>
+		<key>dial_code</key>
+		<string>1</string>
+		<key>latin</key>
+		<string>jia na da</string>
+		<key>name</key>
+		<string>加拿大</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CC</string>
+		<key>dial_code</key>
+		<string>61</string>
+		<key>latin</key>
+		<string>ke ke si （ji lin） qun dao</string>
+		<key>name</key>
+		<string>科科斯（基林）群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CD</string>
+		<key>dial_code</key>
+		<string>243</string>
+		<key>latin</key>
+		<string>gang guo （jin）</string>
+		<key>name</key>
+		<string>刚果（金）</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CF</string>
+		<key>dial_code</key>
+		<string>236</string>
+		<key>latin</key>
+		<string>zhong fei gong he guo</string>
+		<key>name</key>
+		<string>中非共和国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CG</string>
+		<key>dial_code</key>
+		<string>242</string>
+		<key>latin</key>
+		<string>gang guo （bu）</string>
+		<key>name</key>
+		<string>刚果（布）</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CH</string>
+		<key>dial_code</key>
+		<string>41</string>
+		<key>latin</key>
+		<string>rui shi</string>
+		<key>name</key>
+		<string>瑞士</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CI</string>
+		<key>dial_code</key>
+		<string>225</string>
+		<key>latin</key>
+		<string>ke te di wa</string>
+		<key>name</key>
+		<string>科特迪瓦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CK</string>
+		<key>dial_code</key>
+		<string>682</string>
+		<key>latin</key>
+		<string>ku ke qun dao</string>
+		<key>name</key>
+		<string>库克群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CL</string>
+		<key>dial_code</key>
+		<string>56</string>
+		<key>latin</key>
+		<string>zhi li</string>
+		<key>name</key>
+		<string>智利</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CM</string>
+		<key>dial_code</key>
+		<string>237</string>
+		<key>latin</key>
+		<string>ka mai long</string>
+		<key>name</key>
+		<string>喀麦隆</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CN</string>
+		<key>dial_code</key>
+		<string>86</string>
+		<key>latin</key>
+		<string>zhong guo</string>
+		<key>name</key>
+		<string>中国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CO</string>
+		<key>dial_code</key>
+		<string>57</string>
+		<key>latin</key>
+		<string>ge lun bi ya</string>
+		<key>name</key>
+		<string>哥伦比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CP</string>
+		<key>dial_code</key>
+		<string>11</string>
+		<key>latin</key>
+		<string>ke li po dun dao</string>
+		<key>name</key>
+		<string>克利珀顿岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CR</string>
+		<key>dial_code</key>
+		<string>506</string>
+		<key>latin</key>
+		<string>ge si da li jia</string>
+		<key>name</key>
+		<string>哥斯达黎加</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CU</string>
+		<key>dial_code</key>
+		<string>53</string>
+		<key>latin</key>
+		<string>gu ba</string>
+		<key>name</key>
+		<string>古巴</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CV</string>
+		<key>dial_code</key>
+		<string>238</string>
+		<key>latin</key>
+		<string>fu de jiao</string>
+		<key>name</key>
+		<string>佛得角</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CW</string>
+		<key>dial_code</key>
+		<string>599</string>
+		<key>latin</key>
+		<string>ku la suo</string>
+		<key>name</key>
+		<string>库拉索</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CX</string>
+		<key>dial_code</key>
+		<string>61</string>
+		<key>latin</key>
+		<string>sheng dan dao</string>
+		<key>name</key>
+		<string>圣诞岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CY</string>
+		<key>dial_code</key>
+		<string>537</string>
+		<key>latin</key>
+		<string>sai pu lu si</string>
+		<key>name</key>
+		<string>塞浦路斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>CZ</string>
+		<key>dial_code</key>
+		<string>420</string>
+		<key>latin</key>
+		<string>jie ke</string>
+		<key>name</key>
+		<string>捷克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DE</string>
+		<key>dial_code</key>
+		<string>49</string>
+		<key>latin</key>
+		<string>de guo</string>
+		<key>name</key>
+		<string>德国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DG</string>
+		<key>dial_code</key>
+		<string>246</string>
+		<key>latin</key>
+		<string>di ge jia xi ya dao</string>
+		<key>name</key>
+		<string>迪戈加西亚岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DJ</string>
+		<key>dial_code</key>
+		<string>253</string>
+		<key>latin</key>
+		<string>ji bu ti</string>
+		<key>name</key>
+		<string>吉布提</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DK</string>
+		<key>dial_code</key>
+		<string>45</string>
+		<key>latin</key>
+		<string>dan mai</string>
+		<key>name</key>
+		<string>丹麦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DM</string>
+		<key>dial_code</key>
+		<string>1767</string>
+		<key>latin</key>
+		<string>duo mi ni ke</string>
+		<key>name</key>
+		<string>多米尼克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DO</string>
+		<key>dial_code</key>
+		<string>1849</string>
+		<key>latin</key>
+		<string>duo mi ni jia gong he guo</string>
+		<key>name</key>
+		<string>多米尼加共和国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>DZ</string>
+		<key>dial_code</key>
+		<string>213</string>
+		<key>latin</key>
+		<string>a er ji li ya</string>
+		<key>name</key>
+		<string>阿尔及利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>EA</string>
+		<key>dial_code</key>
+		<string>34</string>
+		<key>latin</key>
+		<string>xiu da ji mei li li ya</string>
+		<key>name</key>
+		<string>休达及梅利利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>EC</string>
+		<key>dial_code</key>
+		<string>593</string>
+		<key>latin</key>
+		<string>e gua duo er</string>
+		<key>name</key>
+		<string>厄瓜多尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>EE</string>
+		<key>dial_code</key>
+		<string>372</string>
+		<key>latin</key>
+		<string>ai sha ni ya</string>
+		<key>name</key>
+		<string>爱沙尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>EG</string>
+		<key>dial_code</key>
+		<string>20</string>
+		<key>latin</key>
+		<string>ai ji</string>
+		<key>name</key>
+		<string>埃及</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>EH</string>
+		<key>dial_code</key>
+		<string>212</string>
+		<key>latin</key>
+		<string>xi sa ha la</string>
+		<key>name</key>
+		<string>西撒哈拉</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ER</string>
+		<key>dial_code</key>
+		<string>291</string>
+		<key>latin</key>
+		<string>e li te li ya</string>
+		<key>name</key>
+		<string>厄立特里亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ES</string>
+		<key>dial_code</key>
+		<string>34</string>
+		<key>latin</key>
+		<string>xi ban ya</string>
+		<key>name</key>
+		<string>西班牙</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ET</string>
+		<key>dial_code</key>
+		<string>251</string>
+		<key>latin</key>
+		<string>ai sai e bi ya</string>
+		<key>name</key>
+		<string>埃塞俄比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FI</string>
+		<key>dial_code</key>
+		<string>358</string>
+		<key>latin</key>
+		<string>fen lan</string>
+		<key>name</key>
+		<string>芬兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FJ</string>
+		<key>dial_code</key>
+		<string>679</string>
+		<key>latin</key>
+		<string>fei ji</string>
+		<key>name</key>
+		<string>斐济</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FK</string>
+		<key>dial_code</key>
+		<string>500</string>
+		<key>latin</key>
+		<string>fu ke lan qun dao</string>
+		<key>name</key>
+		<string>福克兰群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FM</string>
+		<key>dial_code</key>
+		<string>691</string>
+		<key>latin</key>
+		<string>mi ke luo ni xi ya</string>
+		<key>name</key>
+		<string>密克罗尼西亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FO</string>
+		<key>dial_code</key>
+		<string>298</string>
+		<key>latin</key>
+		<string>fa luo qun dao</string>
+		<key>name</key>
+		<string>法罗群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>FR</string>
+		<key>dial_code</key>
+		<string>33</string>
+		<key>latin</key>
+		<string>fa guo</string>
+		<key>name</key>
+		<string>法国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GA</string>
+		<key>dial_code</key>
+		<string>241</string>
+		<key>latin</key>
+		<string>jia peng</string>
+		<key>name</key>
+		<string>加蓬</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GB</string>
+		<key>dial_code</key>
+		<string>44</string>
+		<key>latin</key>
+		<string>ying guo</string>
+		<key>name</key>
+		<string>英国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GD</string>
+		<key>dial_code</key>
+		<string>1473</string>
+		<key>latin</key>
+		<string>ge lin na da</string>
+		<key>name</key>
+		<string>格林纳达</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GE</string>
+		<key>dial_code</key>
+		<string>995</string>
+		<key>latin</key>
+		<string>ge lu ji ya</string>
+		<key>name</key>
+		<string>格鲁吉亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GF</string>
+		<key>dial_code</key>
+		<string>594</string>
+		<key>latin</key>
+		<string>fa shu gui ya na</string>
+		<key>name</key>
+		<string>法属圭亚那</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GG</string>
+		<key>dial_code</key>
+		<string>44</string>
+		<key>latin</key>
+		<string>gen xi dao</string>
+		<key>name</key>
+		<string>根西岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GH</string>
+		<key>dial_code</key>
+		<string>233</string>
+		<key>latin</key>
+		<string>jia na</string>
+		<key>name</key>
+		<string>加纳</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GI</string>
+		<key>dial_code</key>
+		<string>350</string>
+		<key>latin</key>
+		<string>zhi bu luo tuo</string>
+		<key>name</key>
+		<string>直布罗陀</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GL</string>
+		<key>dial_code</key>
+		<string>299</string>
+		<key>latin</key>
+		<string>ge ling lan</string>
+		<key>name</key>
+		<string>格陵兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GM</string>
+		<key>dial_code</key>
+		<string>220</string>
+		<key>latin</key>
+		<string>gang bi ya</string>
+		<key>name</key>
+		<string>冈比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GN</string>
+		<key>dial_code</key>
+		<string>224</string>
+		<key>latin</key>
+		<string>ji nei ya</string>
+		<key>name</key>
+		<string>几内亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GP</string>
+		<key>dial_code</key>
+		<string>590</string>
+		<key>latin</key>
+		<string>gua de luo pu</string>
+		<key>name</key>
+		<string>瓜德罗普</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GQ</string>
+		<key>dial_code</key>
+		<string>240</string>
+		<key>latin</key>
+		<string>chi dao ji nei ya</string>
+		<key>name</key>
+		<string>赤道几内亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GR</string>
+		<key>dial_code</key>
+		<string>30</string>
+		<key>latin</key>
+		<string>xi la</string>
+		<key>name</key>
+		<string>希腊</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GS</string>
+		<key>dial_code</key>
+		<string>500</string>
+		<key>latin</key>
+		<string>nan qiao zhi ya he nan sang wei qi qun dao</string>
+		<key>name</key>
+		<string>南乔治亚和南桑威奇群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GT</string>
+		<key>dial_code</key>
+		<string>502</string>
+		<key>latin</key>
+		<string>wei de ma la</string>
+		<key>name</key>
+		<string>危地马拉</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GU</string>
+		<key>dial_code</key>
+		<string>1671</string>
+		<key>latin</key>
+		<string>guan dao</string>
+		<key>name</key>
+		<string>关岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GW</string>
+		<key>dial_code</key>
+		<string>245</string>
+		<key>latin</key>
+		<string>ji nei ya bi shao</string>
+		<key>name</key>
+		<string>几内亚比绍</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>GY</string>
+		<key>dial_code</key>
+		<string>595</string>
+		<key>latin</key>
+		<string>gui ya na</string>
+		<key>name</key>
+		<string>圭亚那</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HK</string>
+		<key>dial_code</key>
+		<string>852</string>
+		<key>latin</key>
+		<string>xiang gang （zhong guo）</string>
+		<key>name</key>
+		<string>香港（中国）</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HM</string>
+		<key>dial_code</key>
+		<string>11</string>
+		<key>latin</key>
+		<string>he de dao he mai ke tang na qun dao</string>
+		<key>name</key>
+		<string>赫德岛和麦克唐纳群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HN</string>
+		<key>dial_code</key>
+		<string>504</string>
+		<key>latin</key>
+		<string>hong dou la si</string>
+		<key>name</key>
+		<string>洪都拉斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HR</string>
+		<key>dial_code</key>
+		<string>385</string>
+		<key>latin</key>
+		<string>ke luo de ya</string>
+		<key>name</key>
+		<string>克罗地亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HT</string>
+		<key>dial_code</key>
+		<string>509</string>
+		<key>latin</key>
+		<string>hai de</string>
+		<key>name</key>
+		<string>海地</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>HU</string>
+		<key>dial_code</key>
+		<string>36</string>
+		<key>latin</key>
+		<string>xiong ya li</string>
+		<key>name</key>
+		<string>匈牙利</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IC</string>
+		<key>dial_code</key>
+		<string>3491</string>
+		<key>latin</key>
+		<string>jia na li qun dao</string>
+		<key>name</key>
+		<string>加纳利群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ID</string>
+		<key>dial_code</key>
+		<string>62</string>
+		<key>latin</key>
+		<string>yin du ni xi ya</string>
+		<key>name</key>
+		<string>印度尼西亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IE</string>
+		<key>dial_code</key>
+		<string>353</string>
+		<key>latin</key>
+		<string>ai er lan</string>
+		<key>name</key>
+		<string>爱尔兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IL</string>
+		<key>dial_code</key>
+		<string>972</string>
+		<key>latin</key>
+		<string>yi se lie</string>
+		<key>name</key>
+		<string>以色列</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IM</string>
+		<key>dial_code</key>
+		<string>44</string>
+		<key>latin</key>
+		<string>ma en dao</string>
+		<key>name</key>
+		<string>马恩岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IN</string>
+		<key>dial_code</key>
+		<string>91</string>
+		<key>latin</key>
+		<string>yin du</string>
+		<key>name</key>
+		<string>印度</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IO</string>
+		<key>dial_code</key>
+		<string>246</string>
+		<key>latin</key>
+		<string>ying shu yin du yang ling de</string>
+		<key>name</key>
+		<string>英属印度洋领地</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IQ</string>
+		<key>dial_code</key>
+		<string>964</string>
+		<key>latin</key>
+		<string>yi la ke</string>
+		<key>name</key>
+		<string>伊拉克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IR</string>
+		<key>dial_code</key>
+		<string>98</string>
+		<key>latin</key>
+		<string>yi lang</string>
+		<key>name</key>
+		<string>伊朗</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IS</string>
+		<key>dial_code</key>
+		<string>354</string>
+		<key>latin</key>
+		<string>bing dao</string>
+		<key>name</key>
+		<string>冰岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>IT</string>
+		<key>dial_code</key>
+		<string>39</string>
+		<key>latin</key>
+		<string>yi da li</string>
+		<key>name</key>
+		<string>意大利</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>JE</string>
+		<key>dial_code</key>
+		<string>44</string>
+		<key>latin</key>
+		<string>ze xi dao</string>
+		<key>name</key>
+		<string>泽西岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>JM</string>
+		<key>dial_code</key>
+		<string>1876</string>
+		<key>latin</key>
+		<string>ya mai jia</string>
+		<key>name</key>
+		<string>牙买加</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>JO</string>
+		<key>dial_code</key>
+		<string>962</string>
+		<key>latin</key>
+		<string>yue dan</string>
+		<key>name</key>
+		<string>约旦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>JP</string>
+		<key>dial_code</key>
+		<string>81</string>
+		<key>latin</key>
+		<string>ri ben</string>
+		<key>name</key>
+		<string>日本</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KE</string>
+		<key>dial_code</key>
+		<string>254</string>
+		<key>latin</key>
+		<string>ken ni ya</string>
+		<key>name</key>
+		<string>肯尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KG</string>
+		<key>dial_code</key>
+		<string>996</string>
+		<key>latin</key>
+		<string>ji er ji si si tan</string>
+		<key>name</key>
+		<string>吉尔吉斯斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KH</string>
+		<key>dial_code</key>
+		<string>855</string>
+		<key>latin</key>
+		<string>jian bu zhai</string>
+		<key>name</key>
+		<string>柬埔寨</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KI</string>
+		<key>dial_code</key>
+		<string>686</string>
+		<key>latin</key>
+		<string>ji li ba si</string>
+		<key>name</key>
+		<string>基里巴斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KM</string>
+		<key>dial_code</key>
+		<string>269</string>
+		<key>latin</key>
+		<string>ke mo luo</string>
+		<key>name</key>
+		<string>科摩罗</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KN</string>
+		<key>dial_code</key>
+		<string>1869</string>
+		<key>latin</key>
+		<string>sheng ji ci he ni wei si</string>
+		<key>name</key>
+		<string>圣基茨和尼维斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KP</string>
+		<key>dial_code</key>
+		<string>850</string>
+		<key>latin</key>
+		<string>chao xian</string>
+		<key>name</key>
+		<string>朝鲜</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KR</string>
+		<key>dial_code</key>
+		<string>82</string>
+		<key>latin</key>
+		<string>han guo</string>
+		<key>name</key>
+		<string>韩国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KW</string>
+		<key>dial_code</key>
+		<string>965</string>
+		<key>latin</key>
+		<string>ke wei te</string>
+		<key>name</key>
+		<string>科威特</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KY</string>
+		<key>dial_code</key>
+		<string>345</string>
+		<key>latin</key>
+		<string>kai man qun dao</string>
+		<key>name</key>
+		<string>开曼群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>KZ</string>
+		<key>dial_code</key>
+		<string>77</string>
+		<key>latin</key>
+		<string>ha sa ke si tan</string>
+		<key>name</key>
+		<string>哈萨克斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LA</string>
+		<key>dial_code</key>
+		<string>856</string>
+		<key>latin</key>
+		<string>lao wo</string>
+		<key>name</key>
+		<string>老挝</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LB</string>
+		<key>dial_code</key>
+		<string>961</string>
+		<key>latin</key>
+		<string>li ba nen</string>
+		<key>name</key>
+		<string>黎巴嫩</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LC</string>
+		<key>dial_code</key>
+		<string>1758</string>
+		<key>latin</key>
+		<string>sheng lu xi ya</string>
+		<key>name</key>
+		<string>圣卢西亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LI</string>
+		<key>dial_code</key>
+		<string>423</string>
+		<key>latin</key>
+		<string>lie zhi dun shi deng</string>
+		<key>name</key>
+		<string>列支敦士登</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LK</string>
+		<key>dial_code</key>
+		<string>94</string>
+		<key>latin</key>
+		<string>si li lan ka</string>
+		<key>name</key>
+		<string>斯里兰卡</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LR</string>
+		<key>dial_code</key>
+		<string>231</string>
+		<key>latin</key>
+		<string>li bi li ya</string>
+		<key>name</key>
+		<string>利比里亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LS</string>
+		<key>dial_code</key>
+		<string>266</string>
+		<key>latin</key>
+		<string>lai suo tuo</string>
+		<key>name</key>
+		<string>莱索托</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LT</string>
+		<key>dial_code</key>
+		<string>370</string>
+		<key>latin</key>
+		<string>li tao wan</string>
+		<key>name</key>
+		<string>立陶宛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LU</string>
+		<key>dial_code</key>
+		<string>352</string>
+		<key>latin</key>
+		<string>lu sen bao</string>
+		<key>name</key>
+		<string>卢森堡</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LV</string>
+		<key>dial_code</key>
+		<string>371</string>
+		<key>latin</key>
+		<string>la tuo wei ya</string>
+		<key>name</key>
+		<string>拉脱维亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>LY</string>
+		<key>dial_code</key>
+		<string>218</string>
+		<key>latin</key>
+		<string>li bi ya</string>
+		<key>name</key>
+		<string>利比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MA</string>
+		<key>dial_code</key>
+		<string>212</string>
+		<key>latin</key>
+		<string>mo luo ge</string>
+		<key>name</key>
+		<string>摩洛哥</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MC</string>
+		<key>dial_code</key>
+		<string>377</string>
+		<key>latin</key>
+		<string>mo na ge</string>
+		<key>name</key>
+		<string>摩纳哥</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MD</string>
+		<key>dial_code</key>
+		<string>373</string>
+		<key>latin</key>
+		<string>mo er duo wa</string>
+		<key>name</key>
+		<string>摩尔多瓦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ME</string>
+		<key>dial_code</key>
+		<string>382</string>
+		<key>latin</key>
+		<string>hei shan</string>
+		<key>name</key>
+		<string>黑山</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MF</string>
+		<key>dial_code</key>
+		<string>590</string>
+		<key>latin</key>
+		<string>fa shu sheng ma ding</string>
+		<key>name</key>
+		<string>法属圣马丁</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MG</string>
+		<key>dial_code</key>
+		<string>261</string>
+		<key>latin</key>
+		<string>ma da jia si jia</string>
+		<key>name</key>
+		<string>马达加斯加</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MH</string>
+		<key>dial_code</key>
+		<string>692</string>
+		<key>latin</key>
+		<string>ma shao er qun dao</string>
+		<key>name</key>
+		<string>马绍尔群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MK</string>
+		<key>dial_code</key>
+		<string>389</string>
+		<key>latin</key>
+		<string>ma qi dun</string>
+		<key>name</key>
+		<string>马其顿</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ML</string>
+		<key>dial_code</key>
+		<string>223</string>
+		<key>latin</key>
+		<string>ma li</string>
+		<key>name</key>
+		<string>马里</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MM</string>
+		<key>dial_code</key>
+		<string>95</string>
+		<key>latin</key>
+		<string>mian dian</string>
+		<key>name</key>
+		<string>缅甸</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MN</string>
+		<key>dial_code</key>
+		<string>976</string>
+		<key>latin</key>
+		<string>meng gu</string>
+		<key>name</key>
+		<string>蒙古</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MO</string>
+		<key>dial_code</key>
+		<string>853</string>
+		<key>latin</key>
+		<string>ao men （zhong guo）</string>
+		<key>name</key>
+		<string>澳门（中国）</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MP</string>
+		<key>dial_code</key>
+		<string>1670</string>
+		<key>latin</key>
+		<string>bei ma li ya na qun dao</string>
+		<key>name</key>
+		<string>北马里亚纳群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MQ</string>
+		<key>dial_code</key>
+		<string>596</string>
+		<key>latin</key>
+		<string>ma ti ni ke</string>
+		<key>name</key>
+		<string>马提尼克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MR</string>
+		<key>dial_code</key>
+		<string>222</string>
+		<key>latin</key>
+		<string>mao li ta ni ya</string>
+		<key>name</key>
+		<string>毛里塔尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MS</string>
+		<key>dial_code</key>
+		<string>1664</string>
+		<key>latin</key>
+		<string>meng te sai la te</string>
+		<key>name</key>
+		<string>蒙特塞拉特</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MT</string>
+		<key>dial_code</key>
+		<string>356</string>
+		<key>latin</key>
+		<string>ma er ta</string>
+		<key>name</key>
+		<string>马耳他</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MU</string>
+		<key>dial_code</key>
+		<string>230</string>
+		<key>latin</key>
+		<string>mao li qiu si</string>
+		<key>name</key>
+		<string>毛里求斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MV</string>
+		<key>dial_code</key>
+		<string>960</string>
+		<key>latin</key>
+		<string>ma er dai fu</string>
+		<key>name</key>
+		<string>马尔代夫</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MW</string>
+		<key>dial_code</key>
+		<string>265</string>
+		<key>latin</key>
+		<string>ma la wei</string>
+		<key>name</key>
+		<string>马拉维</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MX</string>
+		<key>dial_code</key>
+		<string>52</string>
+		<key>latin</key>
+		<string>mo xi ge</string>
+		<key>name</key>
+		<string>墨西哥</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MY</string>
+		<key>dial_code</key>
+		<string>60</string>
+		<key>latin</key>
+		<string>ma lai xi ya</string>
+		<key>name</key>
+		<string>马来西亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>MZ</string>
+		<key>dial_code</key>
+		<string>258</string>
+		<key>latin</key>
+		<string>mo sang bi ke</string>
+		<key>name</key>
+		<string>莫桑比克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NA</string>
+		<key>dial_code</key>
+		<string>264</string>
+		<key>latin</key>
+		<string>na mi bi ya</string>
+		<key>name</key>
+		<string>纳米比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NC</string>
+		<key>dial_code</key>
+		<string>687</string>
+		<key>latin</key>
+		<string>xin ka li duo ni ya</string>
+		<key>name</key>
+		<string>新喀里多尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NE</string>
+		<key>dial_code</key>
+		<string>227</string>
+		<key>latin</key>
+		<string>ni ri er</string>
+		<key>name</key>
+		<string>尼日尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NF</string>
+		<key>dial_code</key>
+		<string>672</string>
+		<key>latin</key>
+		<string>nuo fu ke dao</string>
+		<key>name</key>
+		<string>诺福克岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NG</string>
+		<key>dial_code</key>
+		<string>234</string>
+		<key>latin</key>
+		<string>ni ri li ya</string>
+		<key>name</key>
+		<string>尼日利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NI</string>
+		<key>dial_code</key>
+		<string>505</string>
+		<key>latin</key>
+		<string>ni jia la gua</string>
+		<key>name</key>
+		<string>尼加拉瓜</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NL</string>
+		<key>dial_code</key>
+		<string>31</string>
+		<key>latin</key>
+		<string>he lan</string>
+		<key>name</key>
+		<string>荷兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NO</string>
+		<key>dial_code</key>
+		<string>47</string>
+		<key>latin</key>
+		<string>nuo wei</string>
+		<key>name</key>
+		<string>挪威</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NP</string>
+		<key>dial_code</key>
+		<string>977</string>
+		<key>latin</key>
+		<string>ni po er</string>
+		<key>name</key>
+		<string>尼泊尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NR</string>
+		<key>dial_code</key>
+		<string>674</string>
+		<key>latin</key>
+		<string>nao lu</string>
+		<key>name</key>
+		<string>瑙鲁</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NU</string>
+		<key>dial_code</key>
+		<string>683</string>
+		<key>latin</key>
+		<string>niu ai</string>
+		<key>name</key>
+		<string>纽埃</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>NZ</string>
+		<key>dial_code</key>
+		<string>64</string>
+		<key>latin</key>
+		<string>xin xi lan</string>
+		<key>name</key>
+		<string>新西兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>OM</string>
+		<key>dial_code</key>
+		<string>968</string>
+		<key>latin</key>
+		<string>a man</string>
+		<key>name</key>
+		<string>阿曼</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PA</string>
+		<key>dial_code</key>
+		<string>507</string>
+		<key>latin</key>
+		<string>ba na ma</string>
+		<key>name</key>
+		<string>巴拿马</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PE</string>
+		<key>dial_code</key>
+		<string>51</string>
+		<key>latin</key>
+		<string>bi lu</string>
+		<key>name</key>
+		<string>秘鲁</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PF</string>
+		<key>dial_code</key>
+		<string>689</string>
+		<key>latin</key>
+		<string>fa shu bo li ni xi ya</string>
+		<key>name</key>
+		<string>法属波利尼西亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PG</string>
+		<key>dial_code</key>
+		<string>675</string>
+		<key>latin</key>
+		<string>ba bu ya xin ji nei ya</string>
+		<key>name</key>
+		<string>巴布亚新几内亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PH</string>
+		<key>dial_code</key>
+		<string>63</string>
+		<key>latin</key>
+		<string>fei lu bin</string>
+		<key>name</key>
+		<string>菲律宾</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PK</string>
+		<key>dial_code</key>
+		<string>92</string>
+		<key>latin</key>
+		<string>ba ji si tan</string>
+		<key>name</key>
+		<string>巴基斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PL</string>
+		<key>dial_code</key>
+		<string>48</string>
+		<key>latin</key>
+		<string>bo lan</string>
+		<key>name</key>
+		<string>波兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PM</string>
+		<key>dial_code</key>
+		<string>508</string>
+		<key>latin</key>
+		<string>sheng pi ai er he mi ke long qun dao</string>
+		<key>name</key>
+		<string>圣皮埃尔和密克隆群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PN</string>
+		<key>dial_code</key>
+		<string>872</string>
+		<key>latin</key>
+		<string>pi te kai en qun dao</string>
+		<key>name</key>
+		<string>皮特凯恩群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PR</string>
+		<key>dial_code</key>
+		<string>1939</string>
+		<key>latin</key>
+		<string>bo duo li ge</string>
+		<key>name</key>
+		<string>波多黎各</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PS</string>
+		<key>dial_code</key>
+		<string>970</string>
+		<key>latin</key>
+		<string>ba lei si tan ling tu</string>
+		<key>name</key>
+		<string>巴勒斯坦领土</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PT</string>
+		<key>dial_code</key>
+		<string>351</string>
+		<key>latin</key>
+		<string>pu tao ya</string>
+		<key>name</key>
+		<string>葡萄牙</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PW</string>
+		<key>dial_code</key>
+		<string>680</string>
+		<key>latin</key>
+		<string>pa lao</string>
+		<key>name</key>
+		<string>帕劳</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>PY</string>
+		<key>dial_code</key>
+		<string>595</string>
+		<key>latin</key>
+		<string>ba la gui</string>
+		<key>name</key>
+		<string>巴拉圭</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>QA</string>
+		<key>dial_code</key>
+		<string>974</string>
+		<key>latin</key>
+		<string>ka ta er</string>
+		<key>name</key>
+		<string>卡塔尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>RE</string>
+		<key>dial_code</key>
+		<string>262</string>
+		<key>latin</key>
+		<string>liu ni wang</string>
+		<key>name</key>
+		<string>留尼汪</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>RO</string>
+		<key>dial_code</key>
+		<string>40</string>
+		<key>latin</key>
+		<string>luo ma ni ya</string>
+		<key>name</key>
+		<string>罗马尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>RS</string>
+		<key>dial_code</key>
+		<string>381</string>
+		<key>latin</key>
+		<string>sai er wei ya</string>
+		<key>name</key>
+		<string>塞尔维亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>RU</string>
+		<key>dial_code</key>
+		<string>7</string>
+		<key>latin</key>
+		<string>e luo si</string>
+		<key>name</key>
+		<string>俄罗斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>RW</string>
+		<key>dial_code</key>
+		<string>250</string>
+		<key>latin</key>
+		<string>lu wang da</string>
+		<key>name</key>
+		<string>卢旺达</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SA</string>
+		<key>dial_code</key>
+		<string>966</string>
+		<key>latin</key>
+		<string>sha te a la bo</string>
+		<key>name</key>
+		<string>沙特阿拉伯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SB</string>
+		<key>dial_code</key>
+		<string>677</string>
+		<key>latin</key>
+		<string>suo luo men qun dao</string>
+		<key>name</key>
+		<string>所罗门群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SC</string>
+		<key>dial_code</key>
+		<string>248</string>
+		<key>latin</key>
+		<string>sai she er</string>
+		<key>name</key>
+		<string>塞舌尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SD</string>
+		<key>dial_code</key>
+		<string>249</string>
+		<key>latin</key>
+		<string>su dan</string>
+		<key>name</key>
+		<string>苏丹</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SE</string>
+		<key>dial_code</key>
+		<string>46</string>
+		<key>latin</key>
+		<string>rui dian</string>
+		<key>name</key>
+		<string>瑞典</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SG</string>
+		<key>dial_code</key>
+		<string>65</string>
+		<key>latin</key>
+		<string>xin jia po</string>
+		<key>name</key>
+		<string>新加坡</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SH</string>
+		<key>dial_code</key>
+		<string>290</string>
+		<key>latin</key>
+		<string>sheng he lei na</string>
+		<key>name</key>
+		<string>圣赫勒拿</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SI</string>
+		<key>dial_code</key>
+		<string>386</string>
+		<key>latin</key>
+		<string>si luo wen ni ya</string>
+		<key>name</key>
+		<string>斯洛文尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SJ</string>
+		<key>dial_code</key>
+		<string>47</string>
+		<key>latin</key>
+		<string>si wa er ba he yang ma yan</string>
+		<key>name</key>
+		<string>斯瓦尔巴和扬马延</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SK</string>
+		<key>dial_code</key>
+		<string>421</string>
+		<key>latin</key>
+		<string>si luo fa ke</string>
+		<key>name</key>
+		<string>斯洛伐克</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SL</string>
+		<key>dial_code</key>
+		<string>232</string>
+		<key>latin</key>
+		<string>sai la li ang</string>
+		<key>name</key>
+		<string>塞拉利昂</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SM</string>
+		<key>dial_code</key>
+		<string>378</string>
+		<key>latin</key>
+		<string>sheng ma li nuo</string>
+		<key>name</key>
+		<string>圣马力诺</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SN</string>
+		<key>dial_code</key>
+		<string>221</string>
+		<key>latin</key>
+		<string>sai nei jia er</string>
+		<key>name</key>
+		<string>塞内加尔</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SO</string>
+		<key>dial_code</key>
+		<string>252</string>
+		<key>latin</key>
+		<string>suo ma li</string>
+		<key>name</key>
+		<string>索马里</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SR</string>
+		<key>dial_code</key>
+		<string>597</string>
+		<key>latin</key>
+		<string>su li nan</string>
+		<key>name</key>
+		<string>苏里南</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SS</string>
+		<key>dial_code</key>
+		<string>211</string>
+		<key>latin</key>
+		<string>nan su dan</string>
+		<key>name</key>
+		<string>南苏丹</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ST</string>
+		<key>dial_code</key>
+		<string>239</string>
+		<key>latin</key>
+		<string>sheng duo mei he pu lin xi bi</string>
+		<key>name</key>
+		<string>圣多美和普林西比</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SV</string>
+		<key>dial_code</key>
+		<string>503</string>
+		<key>latin</key>
+		<string>sa er wa duo</string>
+		<key>name</key>
+		<string>萨尔瓦多</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SX</string>
+		<key>dial_code</key>
+		<string>1721</string>
+		<key>latin</key>
+		<string>he shu sheng ma ding</string>
+		<key>name</key>
+		<string>荷属圣马丁</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SY</string>
+		<key>dial_code</key>
+		<string>963</string>
+		<key>latin</key>
+		<string>xu li ya</string>
+		<key>name</key>
+		<string>叙利亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>SZ</string>
+		<key>dial_code</key>
+		<string>268</string>
+		<key>latin</key>
+		<string>si wei shi lan</string>
+		<key>name</key>
+		<string>斯威士兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TA</string>
+		<key>dial_code</key>
+		<string>2908</string>
+		<key>latin</key>
+		<string>te li si tan-da ku ni ya qun dao</string>
+		<key>name</key>
+		<string>特里斯坦-达库尼亚群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TC</string>
+		<key>dial_code</key>
+		<string>1649</string>
+		<key>latin</key>
+		<string>te ke si he kai ke si qun dao</string>
+		<key>name</key>
+		<string>特克斯和凯科斯群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TD</string>
+		<key>dial_code</key>
+		<string>235</string>
+		<key>latin</key>
+		<string>zha de</string>
+		<key>name</key>
+		<string>乍得</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TF</string>
+		<key>dial_code</key>
+		<string>262</string>
+		<key>latin</key>
+		<string>fa shu nan bu ling de</string>
+		<key>name</key>
+		<string>法属南部领地</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TG</string>
+		<key>dial_code</key>
+		<string>228</string>
+		<key>latin</key>
+		<string>duo ge</string>
+		<key>name</key>
+		<string>多哥</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TH</string>
+		<key>dial_code</key>
+		<string>66</string>
+		<key>latin</key>
+		<string>tai guo</string>
+		<key>name</key>
+		<string>泰国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TJ</string>
+		<key>dial_code</key>
+		<string>992</string>
+		<key>latin</key>
+		<string>ta ji ke si tan</string>
+		<key>name</key>
+		<string>塔吉克斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TK</string>
+		<key>dial_code</key>
+		<string>690</string>
+		<key>latin</key>
+		<string>tuo ke lao</string>
+		<key>name</key>
+		<string>托克劳</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TL</string>
+		<key>dial_code</key>
+		<string>670</string>
+		<key>latin</key>
+		<string>dong di wen</string>
+		<key>name</key>
+		<string>东帝汶</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TM</string>
+		<key>dial_code</key>
+		<string>993</string>
+		<key>latin</key>
+		<string>tu ku man si tan</string>
+		<key>name</key>
+		<string>土库曼斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TN</string>
+		<key>dial_code</key>
+		<string>216</string>
+		<key>latin</key>
+		<string>tu ni si</string>
+		<key>name</key>
+		<string>突尼斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TO</string>
+		<key>dial_code</key>
+		<string>676</string>
+		<key>latin</key>
+		<string>tang jia</string>
+		<key>name</key>
+		<string>汤加</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TR</string>
+		<key>dial_code</key>
+		<string>90</string>
+		<key>latin</key>
+		<string>tu er qi</string>
+		<key>name</key>
+		<string>土耳其</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TT</string>
+		<key>dial_code</key>
+		<string>1868</string>
+		<key>latin</key>
+		<string>te li ni da he duo ba ge</string>
+		<key>name</key>
+		<string>特立尼达和多巴哥</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TV</string>
+		<key>dial_code</key>
+		<string>688</string>
+		<key>latin</key>
+		<string>tu wa lu</string>
+		<key>name</key>
+		<string>图瓦卢</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TW</string>
+		<key>dial_code</key>
+		<string>886</string>
+		<key>latin</key>
+		<string>tai wan</string>
+		<key>name</key>
+		<string>台湾</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>TZ</string>
+		<key>dial_code</key>
+		<string>255</string>
+		<key>latin</key>
+		<string>tan sang ni ya</string>
+		<key>name</key>
+		<string>坦桑尼亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>UA</string>
+		<key>dial_code</key>
+		<string>380</string>
+		<key>latin</key>
+		<string>wu ke lan</string>
+		<key>name</key>
+		<string>乌克兰</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>UG</string>
+		<key>dial_code</key>
+		<string>256</string>
+		<key>latin</key>
+		<string>wu gan da</string>
+		<key>name</key>
+		<string>乌干达</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>UM</string>
+		<key>dial_code</key>
+		<string>1</string>
+		<key>latin</key>
+		<string>mei guo ben tu wai xiao dao yu</string>
+		<key>name</key>
+		<string>美国本土外小岛屿</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>US</string>
+		<key>dial_code</key>
+		<string>1</string>
+		<key>latin</key>
+		<string>mei guo</string>
+		<key>name</key>
+		<string>美国</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>UY</string>
+		<key>dial_code</key>
+		<string>598</string>
+		<key>latin</key>
+		<string>wu la gui</string>
+		<key>name</key>
+		<string>乌拉圭</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>UZ</string>
+		<key>dial_code</key>
+		<string>998</string>
+		<key>latin</key>
+		<string>wu zi bie ke si tan</string>
+		<key>name</key>
+		<string>乌兹别克斯坦</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VA</string>
+		<key>dial_code</key>
+		<string>379</string>
+		<key>latin</key>
+		<string>fan di gang</string>
+		<key>name</key>
+		<string>梵蒂冈</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VC</string>
+		<key>dial_code</key>
+		<string>1784</string>
+		<key>latin</key>
+		<string>sheng wen sen te he ge lin na ding si</string>
+		<key>name</key>
+		<string>圣文森特和格林纳丁斯</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VE</string>
+		<key>dial_code</key>
+		<string>58</string>
+		<key>latin</key>
+		<string>wei nei rui la</string>
+		<key>name</key>
+		<string>委内瑞拉</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VG</string>
+		<key>dial_code</key>
+		<string>1284</string>
+		<key>latin</key>
+		<string>ying shu wei er jing qun dao</string>
+		<key>name</key>
+		<string>英属维尔京群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VI</string>
+		<key>dial_code</key>
+		<string>1340</string>
+		<key>latin</key>
+		<string>mei shu wei er jing qun dao</string>
+		<key>name</key>
+		<string>美属维尔京群岛</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VN</string>
+		<key>dial_code</key>
+		<string>84</string>
+		<key>latin</key>
+		<string>yue nan</string>
+		<key>name</key>
+		<string>越南</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>VU</string>
+		<key>dial_code</key>
+		<string>678</string>
+		<key>latin</key>
+		<string>wa nu a tu</string>
+		<key>name</key>
+		<string>瓦努阿图</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>WF</string>
+		<key>dial_code</key>
+		<string>681</string>
+		<key>latin</key>
+		<string>wa li si he fu tu na</string>
+		<key>name</key>
+		<string>瓦利斯和富图纳</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>WS</string>
+		<key>dial_code</key>
+		<string>685</string>
+		<key>latin</key>
+		<string>sa mo ya</string>
+		<key>name</key>
+		<string>萨摩亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>XK</string>
+		<key>dial_code</key>
+		<string>383</string>
+		<key>latin</key>
+		<string>ke suo wo</string>
+		<key>name</key>
+		<string>科索沃</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>YE</string>
+		<key>dial_code</key>
+		<string>967</string>
+		<key>latin</key>
+		<string>ye men</string>
+		<key>name</key>
+		<string>也门</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>YT</string>
+		<key>dial_code</key>
+		<string>262</string>
+		<key>latin</key>
+		<string>ma yue te</string>
+		<key>name</key>
+		<string>马约特</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ZA</string>
+		<key>dial_code</key>
+		<string>27</string>
+		<key>latin</key>
+		<string>nan fei</string>
+		<key>name</key>
+		<string>南非</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ZM</string>
+		<key>dial_code</key>
+		<string>260</string>
+		<key>latin</key>
+		<string>zan bi ya</string>
+		<key>name</key>
+		<string>赞比亚</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>ZW</string>
+		<key>dial_code</key>
+		<string>263</string>
+		<key>latin</key>
+		<string>jin ba bu wei</string>
+		<key>name</key>
+		<string>津巴布韦</string>
+	</dict>
+</array>
+</plist>

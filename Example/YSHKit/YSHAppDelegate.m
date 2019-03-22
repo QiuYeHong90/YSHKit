@@ -14,7 +14,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+    
+    {
+        NSString * path  = [[NSBundle mainBundle] pathForResource:@"phone_code" ofType:@"plist"];
+        NSDictionary * dict = [NSDictionary dictionaryWithContentsOfURL:[NSURL fileURLWithPath:path]];
+        //    NSArray * dataArr1 = [NSArray arrayWithContentsOfURL:[NSURL fileURLWithPath:path]];
+        
+        [[YSHCountryCodeTool shareCountryCodeTool] initLoad:dict];
+    }
     
     return YES;
 }
