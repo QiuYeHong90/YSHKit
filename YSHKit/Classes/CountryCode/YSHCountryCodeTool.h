@@ -78,6 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
  自定义国家代码
  */
 -(void)initLoad:(NSDictionary *)codeRoot;
+
+/**
+ 加载系统
+ */
++(void)initLoadData;
 @end
 
 NS_ASSUME_NONNULL_END

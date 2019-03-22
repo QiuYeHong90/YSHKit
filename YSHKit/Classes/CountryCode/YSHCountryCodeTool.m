@@ -38,9 +38,17 @@ static YSHCountryCodeTool *manager = nil;
 }
 
 
++(void)initLoadData
+{
+    [[[self class ] shareCountryCodeTool] initLoad:nil];
+}
+
 -(void)initLoad:(NSDictionary *)codeRoot
 {
     
+    if (codeRoot == nil) {
+        
+    }
     
     NSString *userLanguage ;
     NSString *phoneLanguage = [[[NSUserDefaults standardUserDefaults]objectForKey:@"AppleLanguages"] firstObject];
@@ -70,8 +78,8 @@ static YSHCountryCodeTool *manager = nil;
     NSArray * tempArr = codeRoot[key];
     
     NSArray * codeArr = [NSArray modelArrayWithClass:YSHCountryCodeModel.class json:tempArr];
-    if (!self.countryCodeArray) {
-        self.countryCodeArray = codeArr ;
+    if (!_countryCodeArray) {
+        _countryCodeArray = codeArr ;
     }
     
     
