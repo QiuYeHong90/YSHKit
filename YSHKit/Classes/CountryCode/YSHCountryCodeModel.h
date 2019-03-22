@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *latin;
 
 @property (nonatomic,copy) NSString * phone;
+@property (nonatomic,copy) NSString * searchString;
+
 @end
 
 NS_ASSUME_NONNULL_END

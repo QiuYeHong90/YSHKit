@@ -98,8 +98,10 @@
     
     searchController.searchResultsController.view.hidden = NO;
     
-    //谓词搜索
-    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"name CONTAINS %@ or dial_code CONTAINS %@",searchController.searchBar.text,searchController.searchBar.text];
+
+    //谓词搜索 or dial_code == %@ searchString
+    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"SELF.searchString CONTAINS %@",searchController.searchBar.text,searchController.searchBar.text];
+
     if (self.searchList!= nil) {
         [self.searchList removeAllObjects];
     }

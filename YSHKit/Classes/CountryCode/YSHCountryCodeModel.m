@@ -9,5 +9,9 @@
 #import "YSHCountryCodeModel.h"
 
 @implementation YSHCountryCodeModel
+-(NSString *)searchString
+{
+    return   [NSString stringWithFormat:@"%@%@",self.name,self.dial_code ];
+}
 
 @end
