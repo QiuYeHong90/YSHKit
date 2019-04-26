@@ -23,10 +23,10 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29A421C7497C00A9947F /* YSHTextFieldVC.m */; };
 		700B29AE21C773BF00A9947F /* YDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 700B29AD21C773BF00A9947F /* YDTextField.m */; };
+		704BC2FD2249ED9400B38C89 /* UIView+YSHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 704BC2FC2249ED9400B38C89 /* UIView+YSHTool.m */; };
 		7059616122448EB300756529 /* code_vietnam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7059616022448EB300756529 /* code_vietnam.plist */; };
 		7059616322448EBA00756529 /* code_china.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7059616222448EB900756529 /* code_china.plist */; };
 		7059616522448EC000756529 /* code_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7059616422448EC000756529 /* code_en.plist */; };
-		705961672244918600756529 /* phone_code.plist in Resources */ = {isa = PBXBuildFile; fileRef = 705961662244918600756529 /* phone_code.plist */; };
 		70796B4321C891C00086190B /* DYPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70796B4221C891C00086190B /* DYPhotoContainerView.m */; };
 		70796B4B21C8DF8B0086190B /* YSHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70796B4921C8DF8B0086190B /* YSHTableViewCell.m */; };
 		707C5AEA21C22AA7008C0DE9 /* YSHHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C5AE921C22AA7008C0DE9 /* YSHHUDVC.m */; };
@@ -79,10 +79,11 @@
 		700B29A421C7497C00A9947F /* YSHTextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSHTextFieldVC.m; sourceTree = "<group>"; };
 		700B29AC21C773BB00A9947F /* YDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDTextField.h; sourceTree = "<group>"; };
 		700B29AD21C773BF00A9947F /* YDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDTextField.m; sourceTree = "<group>"; };
+		704BC2FB2249ED9400B38C89 /* UIView+YSHTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YSHTool.h"; sourceTree = "<group>"; };
+		704BC2FC2249ED9400B38C89 /* UIView+YSHTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YSHTool.m"; sourceTree = "<group>"; };
 		7059616022448EB300756529 /* code_vietnam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code_vietnam.plist; sourceTree = "<group>"; };
 		7059616222448EB900756529 /* code_china.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code_china.plist; sourceTree = "<group>"; };
 		7059616422448EC000756529 /* code_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = code_en.plist; sourceTree = "<group>"; };
-		705961662244918600756529 /* phone_code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = phone_code.plist; path = ../../../../phone_code.plist; sourceTree = "<group>"; };
 		70796B4121C891C00086190B /* DYPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPhotoContainerView.h; sourceTree = "<group>"; };
 		70796B4221C891C00086190B /* DYPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPhotoContainerView.m; sourceTree = "<group>"; };
 		70796B4821C8DF8B0086190B /* YSHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSHTableViewCell.h; sourceTree = "<group>"; };
@@ -183,7 +184,6 @@
 		6003F593195388D20070C39A /* Example for YSHKit */ = {
 			isa = PBXGroup;
 			children = (
-				705961662244918600756529 /* phone_code.plist */,
 				7059616022448EB300756529 /* code_vietnam.plist */,
 				7059616222448EB900756529 /* code_china.plist */,
 				7059616422448EC000756529 /* code_en.plist */,
@@ -281,6 +281,8 @@
 				709031272201787F003E5801 /* NSString+YSHAnimation.m */,
 				70903129220178A3003E5801 /* UIBezierPath+YSHTextPath.h */,
 				7090312A220178A3003E5801 /* UIBezierPath+YSHTextPath.m */,
+				704BC2FB2249ED9400B38C89 /* UIView+YSHTool.h */,
+				704BC2FC2249ED9400B38C89 /* UIView+YSHTool.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -350,6 +352,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -371,7 +374,6 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				7059616122448EB300756529 /* code_vietnam.plist in Resources */,
-				705961672244918600756529 /* phone_code.plist in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				70903125220177AA003E5801 /* YSHHudCustomView.xib in Resources */,
@@ -478,6 +480,7 @@
 				700B29AE21C773BF00A9947F /* YDTextField.m in Sources */,
 				709031282201787F003E5801 /* NSString+YSHAnimation.m in Sources */,
 				709031232201779F003E5801 /* YSHHudCustomView.m in Sources */,
+				704BC2FD2249ED9400B38C89 /* UIView+YSHTool.m in Sources */,
 				700B29A521C7497C00A9947F /* YSHTextFieldVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				7090312B220178A3003E5801 /* UIBezierPath+YSHTextPath.m in Sources */,

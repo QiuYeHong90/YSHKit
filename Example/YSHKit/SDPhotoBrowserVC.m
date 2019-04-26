@@ -5,6 +5,7 @@
 //  Created by shuhui on 2018/12/17.
 //  Copyright © 2018 793983383@qq.com. All rights reserved.
 //
+#import "UIView+YSHTool.h"
 
 #import <SDWebImage/SDImageCache.h>
 #import "YSHTableViewCell.h"
@@ -62,6 +63,14 @@
     
     
     
+    
+    UIView * redView = [UIView new];
+    
+    [self.view addSubview:redView];
+    redView.backgroundColor = UIColor.redColor;
+    
+    redView.frame = CGRectMake(300, 100, 50, 50);
+    [redView exceYsh_layoutSubviews];
     
     
     

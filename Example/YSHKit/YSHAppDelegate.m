@@ -16,9 +16,9 @@
     // Override point for customization after application launch.
     
     {
-        NSString * path  = [[NSBundle mainBundle] pathForResource:@"phone_code" ofType:@"plist"];
-        NSDictionary * dict = [NSDictionary dictionaryWithContentsOfURL:[NSURL fileURLWithPath:path]];
-        [[YSHCountryCodeTool shareCountryCodeTool] initLoad:dict];
+//        NSString * path  = [[NSBundle mainBundle] pathForResource:@"phone_code" ofType:@"plist"];
+//        NSDictionary * dict = [NSDictionary dictionaryWithContentsOfURL:[NSURL fileURLWithPath:path]];
+//        [[YSHCountryCodeTool shareCountryCodeTool] initLoad:dict];
     }
     
     return YES;
