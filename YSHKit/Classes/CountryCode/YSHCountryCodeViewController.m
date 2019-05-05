@@ -58,7 +58,7 @@
     
     self.navigationBar.backgroundColor = [UIColor redColor];
     
-    self.navigationBar.barTintColor = [UIColor colorWithHexString:@"00AE68"];
+    self.navigationBar.barTintColor = [UIColor colorWithHexString:@"008e92"];
     
 //    self.navigationBar
 //    [self.navigationBar setBackgroundImage: [UIImage imageNamed:@"daohang"] forBarMetrics:UIBarMetricsDefault];
