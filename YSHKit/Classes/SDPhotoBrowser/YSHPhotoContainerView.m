@@ -13,6 +13,7 @@ const NSInteger img_MaxNum = 9 ;
 #import "NSBundle+YSHKit.h"
 #import "SDPhotoBrowser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SDImageCache.h"
 #import <YYKit/YYKit.h>
 #import <Masonry/Masonry.h>
 #import "YSHPhotoContainerView.h"
