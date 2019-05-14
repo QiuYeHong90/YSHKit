@@ -1,11 +1,11 @@
 PODS:
   - Masonry (1.1.0)
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
+  - SDWebImage (5.0.2):
+    - SDWebImage/Core (= 5.0.2)
+  - SDWebImage/Core (5.0.2)
   - YSHKit (0.0.1):
     - Masonry (~> 1.1.0)
-    - SDWebImage
+    - SDWebImage (~> 5.0.2)
     - YYKit (~> 1.0.9)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -26,8 +26,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  YSHKit: 7ea29e5010153c9f8b1889e454c50e646d720971
+  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  YSHKit: f71560d14e58ba621dd3bf7f20ee4d3ca40c19d5
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
 PODFILE CHECKSUM: 8de2f37d2ce1134a7134a3c909dc77caa395a4ba
