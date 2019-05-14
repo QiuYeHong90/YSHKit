@@ -1,6 +1,0 @@
-framework module YSHVersionHelper {
-  umbrella header "YSHVersionHelper-umbrella.h"
-
-  export *
-  module * { export * }
-}

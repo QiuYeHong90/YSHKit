@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'YSHKit_Example' do
-  pod 'YSHVersionHelper', :path => '../lib/YSHVersionHelper'
+#  pod 'YSHVersionHelper', :path => '../lib/YSHVersionHelper'
   pod 'YSHKit', :path => '../'
 #  pod 'PLShortVideoKit'
 #  pod 'Qiniu'
