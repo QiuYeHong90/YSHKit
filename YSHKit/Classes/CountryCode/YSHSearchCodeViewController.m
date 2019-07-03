@@ -16,7 +16,7 @@
 
 @interface YSHSearchCodeViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate,UISearchBarDelegate>
 @property (strong, nonatomic) UISearchController *searchController;
-@property (strong, nonatomic) YSHSearchCodeResultViewController *searchVC;
+@property (nonatomic, weak) YSHSearchCodeResultViewController * searchVC;
 @end
 
 @implementation YSHSearchCodeViewController
@@ -42,7 +42,7 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,ZL_IS_IPHONE_X?88:64, [UIScreen mainScreen].bounds.size.width,  [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
     }
-    
+
     return _tableView;
 }
 - (void)viewDidLoad {
@@ -65,12 +65,12 @@
     self.tableView.dataSource = self;
     self.automaticallyAdjustsScrollViewInsets = NO;//不加的话，table会下移
     //    self.edgesForExtendedLayout = UIRectEdgeNone;//不加的话，UISearchBar返回后会上移
-    
+
     UIImage * image =[NSBundle ysh_imageName:@"back"];
     UIImage * newImage = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc]initWithImage:newImage style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    
-    
+
+
     self.navigationItem.leftBarButtonItem = rightButtonItem;
 }
 
@@ -80,23 +80,24 @@
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)initSearchController{
-    
-    self.searchVC = [YSHSearchCodeResultViewController new];
+    YSHSearchCodeResultViewController * searchVC =  [YSHSearchCodeResultViewController new];
+
     //创建UISearchController
-    self.searchController = [[UISearchController alloc]initWithSearchResultsController:self.searchVC];
+    self.searchController = [[UISearchController alloc]initWithSearchResultsController:searchVC];
+    self.searchVC = searchVC;
     self.searchController.searchResultsUpdater = self.searchVC;
     self.searchController.delegate = self;
     self.searchController.searchBar.delegate = self;
     [self.searchController.searchBar sizeToFit];
     YSHCountryCodeViewController * vc = self.navigationController;
     if (vc.searchPlaceholder) {
-        
+
         self.searchController.searchBar.placeholder = vc.searchPlaceholder;
     }else{
         self.searchController.searchBar.placeholder = NSLocalizedString(@"search", nil);
     }
-    
-    
+
+
     //包着搜索框外层的颜色
     self.searchController.searchBar.tintColor = [UIColor colorWithRed:22.0/255 green:161.0/255 blue:1.0/255 alpha:1];
     self.searchController.searchBar.barTintColor = [UIColor groupTableViewBackgroundColor];
@@ -110,43 +111,43 @@
     //    self.searchController.obscuresBackgroundDuringPresentation = NO;
     //点击搜索的时候,是否隐藏导航栏
     self.searchController.hidesNavigationBarDuringPresentation = YES;
-    
+
     //    iOS11之后searchController有了新样式，可以放在导航栏
-    
+
     self.tableView.tableHeaderView = self.searchController.searchBar;
     //    if (@available(iOS 11.0, *)) {
     //        self.navigationItem.searchController = self.searchController;
     //    } else {
     //        self.tableView.tableHeaderView = self.searchController.searchBar;
     //    }
-    
+
 #warning 如果进入预编辑状态,searchBar消失(UISearchController套到TabBarController可能会出现这个情况),请添加下边这句话
     self.definesPresentationContext = YES;
     self.searchVC.nav = self.navigationController;
     self.searchVC.searchBar = self.searchController.searchBar;
-    
-    
+
+
 }
 
 -(void)loadData
 {
     NSArray * dataArr = [YSHCountryCodeTool shareCountryCodeTool].countryCodeArray;
-    
-    
-    
+
+
+
     [self.dataArray setArray:dataArr];
     [self.tableArray setArray:[YSHCountryCodeTool getTableArray:dataArr]];
-    
+
     NSMutableArray * temp = @[].mutableCopy;
     for (YSHSearchCountryModel * model in self.tableArray) {
         [temp addObject:model.indexStr];
     }
     self.indexArray = temp;
-    
+
     [self.tableView reloadData];
-    
+
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-    
+
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -156,7 +157,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
+
     YSHSearchCountryModel * model  =  self.tableArray[section];
     return model.dataArray.count;
 }
@@ -165,9 +166,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DYCountrySearchCell"];
-    
+
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DYCountrySearchCell"];
     }
@@ -175,7 +176,7 @@
     YSHCountryCodeModel * rowModel  = model.dataArray[indexPath.row];
     cell.textLabel.text = rowModel.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"+%@",rowModel.dial_code];
-    
+
     return cell;
 }
 
@@ -207,7 +208,7 @@
 {
     YSHSearchCountryModel * model = self.tableArray[section];
     //    view.textLabel.text = model.indexStr;
-    
+
     return model.indexStr;
 }
 
@@ -215,7 +216,7 @@
 
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    
+
     return self.indexArray;
 }
 
@@ -223,7 +224,7 @@
 {
     YSHSearchCountryModel * model = self.tableArray[indexPath.section];
     YSHCountryCodeModel * rowModel  = model.dataArray[indexPath.row];
-    
+
     YSHCountryCodeViewController * nav = (YSHCountryCodeViewController *)self.navigationController;
     if (nav.CallBlock) {
         nav.CallBlock(rowModel);
@@ -232,10 +233,10 @@
 }
 #pragma mark - UISearchBarDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
-    
-    
-    
-    
+
+
+
+
     [searchBar setShowsCancelButton:YES animated:YES];
     for (id obj in [searchBar subviews]) {
         if ([obj isKindOfClass:[UIView class]]) {
@@ -254,15 +255,15 @@
     //    SearchDetailVC *vc = [[SearchDetailVC alloc]initWithNibName:@"SearchDetailVC" bundle:nil];
     //    [self.navigationController pushViewController:vc animated:YES];
     //    self.searchController.active = NO;
-    
-    
+
+
 }
 
 #pragma mark - UISearchControllerDelegate代理
 //测试UISearchController的执行过程
 - (void)willPresentSearchController:(UISearchController *)searchController {
     NSLog(@"willPresentSearchController");
-    
+
 }
 
 - (void)didPresentSearchController:(UISearchController *)searchController {
@@ -276,7 +277,7 @@
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
     NSLog(@"didDismissSearchController");
-    
+
 }
 
 - (void)presentSearchController:(UISearchController *)searchController {
@@ -287,7 +288,7 @@
 
 /*
  #pragma mark - Navigation
- 
+
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].

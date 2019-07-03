@@ -12,8 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YSHSearchCodeResultViewController : UIViewController<UISearchResultsUpdating>
-@property (strong, nonatomic) UINavigationController *nav;
-@property (strong, nonatomic) UISearchBar *searchBar;
+@property (weak, nonatomic) UINavigationController *nav;
+@property (weak, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) NSMutableArray <YSHSearchCountryModel *>*dataListArry;
 @end
 
