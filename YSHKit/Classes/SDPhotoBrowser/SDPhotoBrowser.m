@@ -138,6 +138,13 @@
     
     for (int i = 0; i < self.imageCount; i++) {
         SDBrowserImageView *imageView = [[SDBrowserImageView alloc] init];
+        __weak typeof(self) weakSelf = self;
+        imageView.CallBlock = ^() {
+            if (weakSelf.CallBlock) {
+                weakSelf.CallBlock(imageView);
+            }
+        };
+        imageView.isHaveDelteBtn = self.isHaveDeleteBtn;
         imageView.tag = i;
         
         // 单击图片
@@ -157,6 +164,13 @@
     [self setupImageOfImageViewForIndex:self.currentImageIndex];
     
 }
+
+-(void)setCollIndexPath:(NSIndexPath *)collIndexPath
+{
+    _collIndexPath = collIndexPath;
+    self.currentImageIndex = collIndexPath.row;
+}
+
 
 // 加载图片
 - (void)setupImageOfImageViewForIndex:(NSInteger)index
@@ -207,10 +221,16 @@
 
 - (void)photoClick:(UITapGestureRecognizer *)recognizer
 {
+    SDBrowserImageView *currentImageView = (SDBrowserImageView *)recognizer.view;
+    [self dismisView:currentImageView];
+}
+
+-(void)dismisView:(UIView *)imgView
+{
     _scrollView.hidden = YES;
     _willDisappear = YES;
     
-    SDBrowserImageView *currentImageView = (SDBrowserImageView *)recognizer.view;
+    SDBrowserImageView *currentImageView = imgView;
     NSInteger currentIndex = currentImageView.tag;
     UIView *sourceView ;
     UICollectionViewCell * cell;
@@ -218,7 +238,11 @@
     if ([self.sourceImagesContainerView isKindOfClass:[UICollectionView class]]) {
         falg = YES;
         UICollectionView * collView =(UICollectionView *) self.sourceImagesContainerView ;
-        NSIndexPath * path = [NSIndexPath indexPathForRow:currentIndex inSection:0];
+        NSInteger section = 0 ;
+        if (self.collIndexPath) {
+            section = self.collIndexPath.section;
+        }
+        NSIndexPath * path = [NSIndexPath indexPathForRow:currentIndex inSection:section];
         cell = [collView cellForItemAtIndexPath:path];
         sourceView = [self ysh_sourceImgView:cell];
         
@@ -231,6 +255,7 @@
         
         
     }
+
     CGRect targetTemp = CGRectZero ;
     if (falg) {
         
@@ -244,7 +269,15 @@
         
         
     }else{
-        sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+
+        if (self.sourceImagesContainerView.subviews.count>currentIndex) {
+            sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+        }
+        if (!sourceView) {
+            [self removeFromSuperview];
+            [[UIApplication sharedApplication] setStatusBarHidden:NO];
+            return ;
+        }
         targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     }
     
@@ -279,6 +312,9 @@
         
     }];
 }
+
+
+
 
 - (void)imageViewDoubleTaped:(UITapGestureRecognizer *)recognizer
 {
@@ -363,7 +399,11 @@
         UICollectionView * collView = (UICollectionView *)self.sourceImagesContainerView ;
         [collView reloadData];
         [collView layoutIfNeeded];
-        NSIndexPath * path = [NSIndexPath indexPathForRow:self.currentImageIndex inSection:0];
+        NSInteger section = 0 ;
+        if (self.collIndexPath) {
+            section = self.collIndexPath.section;
+        }
+        NSIndexPath * path = [NSIndexPath indexPathForRow:self.currentImageIndex inSection:section];
         cell = [collView cellForItemAtIndexPath:path];
         if (cell == nil) {
             [collView layoutIfNeeded];
@@ -371,7 +411,10 @@
         }
         sourceView = [self ysh_sourceImgView:cell];
     }else{
-        sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
+        if (self.sourceImagesContainerView.subviews.count>self.currentImageIndex) {
+            sourceView = self.sourceImagesContainerView.subviews[self.currentImageIndex];
+        }
+
     }
     CGRect rect = CGRectZero ;
     
@@ -391,7 +434,7 @@
     tempView.image = [self placeholderImageForIndex:self.currentImageIndex];
     
     [self addSubview:tempView];
-    
+
     CGRect targetTemp = [_scrollView.subviews[self.currentImageIndex] bounds];
     
     tempView.frame = rect;
@@ -457,7 +500,11 @@
         UICollectionView * collView =(UICollectionView *) self.sourceImagesContainerView ;
         
         if (collView.scrollEnabled) {
-            NSIndexPath * path = [NSIndexPath indexPathForRow:index inSection:0];
+            NSInteger section = 0 ;
+            if (self.collIndexPath) {
+                section = self.collIndexPath.section;
+            }
+            NSIndexPath * path = [NSIndexPath indexPathForRow:index inSection:section];
             if ([collView.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]] ) {
                 
                 UICollectionViewFlowLayout * layout = (UICollectionViewFlowLayout *)collView.collectionViewLayout;
